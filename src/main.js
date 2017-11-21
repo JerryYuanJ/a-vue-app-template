@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import MintUI from 'mint-ui'
 import store from './store/index.js'
+import echarts from 'echarts'
+
+Vue.prototype.$echarts = echarts
 
 Vue.use(MintUI);
 

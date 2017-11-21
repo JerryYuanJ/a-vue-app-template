@@ -20,10 +20,13 @@
           <img slot="icon" src="../assets/my/info.png" width="20" height="20">
         </mt-cell>
       </div>
+
     </div>
   </div>
 </template>
 <style scoped>
+
+
   .content {
     margin-top: 40px;
     display: flex;
@@ -79,6 +82,7 @@
       if (!_footer) {
         this.$store.commit('TOGGLE_FOOTER');
       }
+      this.$store.commit('SELECT_TAB','my')
     }
   }
 </script>

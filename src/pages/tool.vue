@@ -14,9 +14,9 @@
       <div class="group-title">| - 常用应用</div>
       <div class="line"></div>
       <div class="apps">
-        <div @click="go('app',$event)">
-          <img src="static/app.png"/>
-          <span>生活助手</span>
+        <div @click="go('chart',$event)">
+          <img src="static/chart.png"/>
+          <span>业务统计</span>
         </div>
         <div @click="go('bed',$event)">
           <img src="static/bed.ico"/>
@@ -100,18 +100,15 @@
         console.info('change')
       },
       go(index, $event){
-        if (index === 'note') {
-          this.$router.push('/tool/memo');
-        }
-        console.info(`click ${index}`);
-        console.info($event.target)
+        this.$router.push('/tool/' + index);
       }
     },
     created(){
-       let _footer = this.$store.state.footerVisible;
+      let _footer = this.$store.state.footerVisible;
       if (!_footer) {
         this.$store.commit('TOGGLE_FOOTER');
       }
+      this.$store.commit('SELECT_TAB', 'tool')
     }
   }
 </script>

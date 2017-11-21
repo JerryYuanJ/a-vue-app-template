@@ -10,11 +10,15 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    footerVisible: true
+    footerVisible: true,
+    selectedTab: 'main'
   },
   mutations: {
     [types.TOGGLE_FOOTER] (state) {
       state.footerVisible = !state.footerVisible
+    },
+    [types.SELECT_TAB](state, val){
+      state.selectedTab = val
     }
   }
 });

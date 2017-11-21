@@ -19,13 +19,13 @@
   export default {
     data(){
       return {
-        selected: 'main',
+        selected: this.$store.state.selectedTab,
         img1: "static/home_selected.png",
         img3: "static/tool.png",
         img5: "src/assets/logo.png"
       }
     },
-    computed:{
+    computed: {
       isShow: function () {
         return this.$store.state.footerVisible;
       }

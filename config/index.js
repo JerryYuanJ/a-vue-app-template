@@ -1,4 +1,3 @@
-
 'use strict'
 // Template version: 1.2.0
 // see http://vuejs-templates.github.io/webpack for documentation.
@@ -11,15 +10,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/api': {
-        target: 'https://api.douban.com/v2',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': ''
-        }
-      }
-    },
+    proxyTable: {},
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.HOST, if port is in use, a free one will be determined
@@ -38,7 +29,7 @@ module.exports = {
 
     /**
      * Source Maps
-    */
+     */
 
     // https://webpack.js.org/configuration/devtool/#development
     devtool: 'eval-source-map',
@@ -67,7 +58,7 @@ module.exports = {
 
     /**
      * SourceMap
-    */
+     */
     productionSourceMap: true,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
