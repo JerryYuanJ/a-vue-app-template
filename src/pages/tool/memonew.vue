@@ -64,7 +64,12 @@
         this.dateTimeText = val.toLocaleString()
       },
       saveMemo(){
-        console.info('saved')
+        localStorage.setItem('memo', JSON.stringify({
+          title: this.title,
+          content: this.content,
+          dateTime: this.dateTimeText
+        }));
+        console.info(localStorage.getItem('memo'))
       }
     }
   }

@@ -9,7 +9,6 @@
       </mt-cell-swipe>
 
 
-
       <mt-popup
         v-model="popupVisible"
         popup-transition="popup-fade">
@@ -27,6 +26,8 @@
 </style>
 <script>
   import axios from 'axios';
+  import { Toast } from 'mint-ui';
+
 
   export default {
     data(){
@@ -34,9 +35,19 @@
         popupVisible: false,
         right: [
           {
-            content: 'Delete',
-            style: {background: 'red', color: '#fff', width: '50px'},
-            handler: () => this.$messagebox('delete')
+            content: '删除',
+            style: {background: 'red', color: '#fff', width: '50px', textAlign: 'center'},
+            handler: () => this.$messagebox({
+              title: '提示',
+              message: '确定执行此操作?',
+              showCancelButton: true
+            }).then((action) => {
+              if (action === 'confirm') {
+                 Toast({message:'删除成功'})
+              } else {
+
+              }
+            })
           }
         ]
       }

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div class="content-div">
-      <router-view/>
+      <!--<transition enter-active-class="animated zoomIn" leave-active-class="animated zoomOut">-->
+        <router-view/>
+      <!--</transition>-->
     </div>
     <footer-bar class="footer"></footer-bar>
   </div>
@@ -14,9 +16,7 @@
     components: {
       'footer-bar': Footer
     },
-    computed: {
-
-    }
+    computed: {}
   }
 </script>
 

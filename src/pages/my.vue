@@ -3,9 +3,9 @@
     <mt-header fixed title="个人中心"></mt-header>
     <div class="content">
       <div class="user-head">
-        <div class="user-img">
+        <div class="user-img" @click="goMyInfo">
         </div>
-        <div class="right-arrow">
+        <div class="right-arrow" @click="goMyInfo">
           <img src="../assets/my/right.png" height="10" width="10"/>
         </div>
       </div>
@@ -61,7 +61,7 @@
     min-height: 40px;
   }
 
-  .right-arrow{
+  .right-arrow {
     margin-left: 10px;
   }
 
@@ -77,12 +77,17 @@
 </style>
 <script>
   export default {
+    methods: {
+      goMyInfo(){
+        this.$router.push('/my/myinfo');
+      }
+    },
     created(){
       let _footer = this.$store.state.footerVisible;
       if (!_footer) {
         this.$store.commit('TOGGLE_FOOTER');
       }
-      this.$store.commit('SELECT_TAB','my')
+      this.$store.commit('SELECT_TAB', 'my')
     }
   }
 </script>

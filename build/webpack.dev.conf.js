@@ -12,7 +12,8 @@ const portfinder = require('portfinder')
 const express = require('express')
 const app = express()
 var appData = require('../mock/data.json')
-var users = appData.users
+var users = appData.users;
+var my = appData.my;
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 
@@ -48,7 +49,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           errno: 0,
           data: users
         })
-      })
+      }),
+        app.get('/api/my', (req, res) => {
+          res.json({
+            // 这里是你的json内容
+            errno: 0,
+            data: my
+          })
+        })
     }
   },
   plugins: [

@@ -1,6 +1,10 @@
 <template>
   <div id="loadmore">
-    <mt-header fixed title="load more"></mt-header>
+    <mt-header fixed title="Loadmore">
+      <router-link to="/tool" slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+    </mt-header>
     <div class="content">
       <mt-loadmore :top-method="loadTop" :bottom-all-loaded="bottomAllLoaded" :auto-fill="false"
                    @top-status-change="handleTopChange"
@@ -62,7 +66,6 @@
       for (let i = 0; i < 40; i++) {
         this.list.push(i)
       }
-
     }
   }
 </script>

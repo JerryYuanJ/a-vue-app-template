@@ -50,9 +50,6 @@
       }
     },
     mounted(){
-      axios.get('/api/users').then((res) => {
-        console.info(JSON.stringify(res.data))
-      });
       this.drawLine();
     },
     methods: {

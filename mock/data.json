@@ -48,5 +48,16 @@
       "age": 17,
       "address": "Nanchang"
     }
-  ]
+  ],
+  "my": {
+    "name": "周一",
+    "age": 39,
+    "gender": "男",
+    "job": "开发工程师",
+    "level": "T4",
+    "address": "安徽省合肥市蜀山区",
+    "tel": "13698712233",
+    "joinDate": "2016-09-12",
+    "dept": "TECH·移动一组"
+  }
 }
