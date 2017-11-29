@@ -26,10 +26,17 @@
           <img src="static/hr.png"/>
           <span>资源查询</span>
         </div>
-        <div @click="go('note',$event)">
+        <div @click="go('memolist',$event)">
           <img src="static/note.png"/>
           <span>我的备忘</span>
         </div>
+        <div @click="go('loadmore',$event)">
+          <img src="static/data.png"/>
+          <span>测试数据</span>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   </div>

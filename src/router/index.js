@@ -6,6 +6,7 @@ import My from '../pages/my.vue'
 import MemoNew from '../pages/tool/memonew.vue'
 import MemoList from '../pages/tool/memolist.vue'
 import Chart from '../pages/tool/chart.vue'
+import Loadmore from '../pages/tool/Loadmore.vue'
 
 Vue.use(Router);
 
@@ -23,6 +24,9 @@ export default new Router({
       path: '/tool/memolist', component: MemoList
     }, {
       path: '/tool/chart', component: Chart
+    },
+    {
+      path: '/tool/loadmore', component: Loadmore
     }
   ]
 })
