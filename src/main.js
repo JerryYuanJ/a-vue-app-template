@@ -6,10 +6,15 @@ import router from './router'
 import MintUI from 'mint-ui'
 import store from './store/index.js'
 import echarts from 'echarts'
+import fullscreen from 'vue-fullscreen'
+import ElementUI from 'element-ui'
 
-Vue.prototype.$echarts = echarts
+
+Vue.prototype.$echarts = echarts;
 
 Vue.use(MintUI);
+Vue.use(fullscreen);
+Vue.use(ElementUI);
 
 /*Vue.config.productionTip = false;*/
 

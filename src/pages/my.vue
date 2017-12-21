@@ -44,10 +44,14 @@
 
   .user-img {
     background-image: url("../assets/my/user.jpg");
+    /**正方形区域**/
     width: 60px;
     height: 60px;
+    /**border半径要是边长的一半，这样就能画出一个圆**/
     border-radius: 30px;
+    /**设置边框**/
     border: solid #ffffff 2px;
+    /**设置为flex布局，并且内部项目都居中显示**/
     display: flex;
     justify-content: center;
     align-items: center;

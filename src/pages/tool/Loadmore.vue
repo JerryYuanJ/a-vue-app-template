@@ -1,12 +1,14 @@
 <template>
   <div id="loadmore">
-    <mt-header fixed title="Loadmore">
+    <mt-header fixed title="load more">
       <router-link to="/tool" slot="left">
         <mt-button icon="back">返回</mt-button>
       </router-link>
     </mt-header>
     <div class="content">
-      <mt-loadmore :top-method="loadTop" :bottom-all-loaded="bottomAllLoaded" :auto-fill="false"
+      <mt-loadmore :top-method="loadTop"
+                   :bottom-all-loaded="bottomAllLoaded"
+                   :auto-fill="false"
                    @top-status-change="handleTopChange"
                    :bottom-method="loadBottom" ref="loadmore">
 
@@ -16,7 +18,18 @@
           <span v-show="topStatus === 'pull'">下拉我就更新给你看</span>
         </div>
 
-        <mt-cell v-for="(item,index) in list" :title="item+'s'" :key="index"></mt-cell>
+        <mt-cell-swipe
+          @click.native="clickMe"
+          v-for="(item,index) in list"
+          :right="[
+              {content: '发布',style: {background: 'red', color: '#fff', textAlign: 'center'},handler(){release(index)}},
+              {content: '删除',style: {background: 'green', color: '#fff', textAlign: 'center'},handler(){delete1(index)}}
+          ]"
+          :title="item+'s'"
+          :key="index">
+        </mt-cell-swipe>
+
+        <!--<mt-cell v-for="(item,index) in list" :title="item+'s'" :key="index"></mt-cell>-->
       </mt-loadmore>
 
     </div>
@@ -29,6 +42,8 @@
   }
 </style>
 <script>
+  import {Toast} from 'mint-ui'
+
   export default {
     data(){
       return {
@@ -38,6 +53,15 @@
       }
     },
     methods: {
+      release(val){
+        console.info('release:' + val)
+      },
+      delete1(val){
+        console.info('delete:' + val)
+      },
+      clickMe(){
+        console.info('click me')
+      },
       loadTop(){
         let that = this;
         for (let i = 0; i < 10; i++) {
@@ -58,7 +82,6 @@
         this.$refs.loadmore.onBottomLoaded();
       },
       handleTopChange(status){
-        console.info(status)
         this.topStatus = status;
       }
     },

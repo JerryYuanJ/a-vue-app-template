@@ -8,6 +8,7 @@ import MemoList from '../pages/tool/memolist.vue'
 import Chart from '../pages/tool/chart.vue'
 import Loadmore from '../pages/tool/Loadmore.vue'
 import MyInfo from '../pages/my/MyInfo.vue'
+import Workflow from '../pages/tool/Workflow.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -30,6 +31,8 @@ export default new Router({
     },
     {
       path: '/my/myinfo', component: MyInfo
+    }, {
+      path: '/tool/workflow', component: Workflow
     }
   ]
 })

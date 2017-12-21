@@ -16,13 +16,17 @@
   </div>
 </template>
 <style>
-  .chart-container {
-    margin-top: 40px;
-    display: flex;
+  #chart-container {
+    margin-top: 140px;
+  }
+  #myChart{
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    height: 162px;
+    border-radius: 5px;
   }
 </style>
 <script>
-  import axios from 'axios';
 
   export default {
     data(){
@@ -31,16 +35,18 @@
         sheetVisible: false,
         actions: [{
           name: '柱状图', method(){
+            //在切换图类型时重画表格
             that.chartType = 'bar';
             that.drawLine();
           }
         }, {
           name: '折线图', method(){
+            //在切换图类型时重画表格
             that.chartType = 'line';
             that.drawLine();
           }
         }],
-        chartType: 'bar'
+        chartType: 'line'
       }
     },
     created(){
@@ -61,32 +67,42 @@
         let myChart = this.$echarts.init(document.getElementById('myChart'));
         // 绘制图表
         myChart.setOption({
-          color: ['#3398DB','#ef1111'],
+          color: ['#3398DB', '#ef1111'],
+          title:{
+              show:true,
+              text:'测试标题',
+              left:'right'
+          },
           tooltip: {
             trigger: 'axis',
             axisPointer: {            // 坐标轴指示器，坐标轴触发有效
               type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
             }
           },
+          /*//提示块，可点击
           legend: {
             x: 'center',
-            data:['第一季度','第二季度'],
-            top:50,
+            data: ['第一季度', '第二季度'],
+            top: 50,
             selectedMode: 'multiple',
-          },
+          },*/
+          //X轴
           xAxis: {
             data: ["衬衫", "羊毛衫", "雪纺衫", "裤子"]
           },
-          grid:{
-            show:true,
-            top:80,//grid 组件离容器上侧的距离,默认60;上同
+          grid: {
+            show: true,
+            top: 30,//grid 组件离容器上侧的距离,默认60;上同
+            left:'10%',
+            right:10
           },
           yAxis: {},
+          //显示数据
           series: [{
             name: '第一季度',
             type: this.chartType,
             data: [5, 20, 9, 360]
-          },{
+          }, {
             name: '第二季度',
             type: this.chartType,
             data: [51, 2, 190, 26]
