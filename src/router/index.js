@@ -14,6 +14,9 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
+      path: '/', component: Main
+    },
+    {
       path: '/main', component: Main
     }, {
       path: '/tool', component: Tool

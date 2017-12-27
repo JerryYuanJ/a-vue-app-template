@@ -22,7 +22,7 @@
         selected: this.$store.state.selectedTab,
         img1: "/src/assets/tool/home_selected.png",
         img3: "/src/assets/tool/tool.png",
-        img5: "/src/assets/tool/logo.png"
+        img5: "/src/assets/tool/user.png"
       }
     },
     computed: {

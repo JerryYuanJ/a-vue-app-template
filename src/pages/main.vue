@@ -40,7 +40,7 @@
 
   .btn-container {
     display: flex;
-    padding: 5px 10px 5px;
+    padding: 10px 10px 5px;
     justify-content: space-around;
   }
 
