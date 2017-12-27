@@ -28,3 +28,7 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+This demo-application is written in blog : http://blog.csdn.net/qq_25324335/article/details/78669960. Hope it can help you to develop a quick-start vue project.
+Contact me if you have some questions or find some bugs in my app.
+
