@@ -20,19 +20,19 @@
       <!--应用展示-->
       <div class="apps">
         <div @click="go('chart')">
-          <img src="static/chart.png"/>
+          <img src="../assets/tool/chart.png"/>
           <span>业务统计</span>
         </div>
         <div @click="go('loadmore')">
-          <img src="static/data.png"/>
+          <img src="../assets/tool/data.png"/>
           <span>测试数据</span>
         </div>
         <div @click="go('memolist')">
-          <img src="static/note.png"/>
+          <img src="../assets/tool/note.png"/>
           <span>我的备忘</span>
         </div>
         <div @click="go('workflow')">
-          <img src="static/workflow.png"/>
+          <img src="../assets/tool/workflow.png"/>
           <span>工作流</span>
         </div>
       </div>

@@ -101,7 +101,7 @@
           series: [{
             name: '第一季度',
             type: this.chartType,
-            data: [5, 20, 9, 360]
+            data: [5, 20,0, 360]
           }, {
             name: '第二季度',
             type: this.chartType,

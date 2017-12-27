@@ -8,12 +8,20 @@
         <span><mt-badge type="error">10</mt-badge></span>
       </mt-cell-swipe>
 
+      <div class="line-divider"></div>
+
       <mt-cell title="请选择英雄">
         <div @click="choose">{{chooseText}}</div>
       </mt-cell>
 
+      <div class="line-divider"></div>
 
-      <mt-button type="danger" size="small" @click="showDialog">测试Dialog</mt-button>
+
+      <div class="btn-container">
+        <mt-button type="danger" size="small" @click="showDialog">测试Dialog</mt-button>
+
+        <mt-button type="primary" size="small" @click="showPrompt">测试MessageBox的校验</mt-button>
+      </div>
 
 
       <single-selector :popupVisible="showPop" :slotsData="sData" @toggle="toggleSelector"
@@ -25,6 +33,17 @@
 <style scoped>
 
 
+  .line-divider {
+    background-color: #bfcbd9;
+    height: 1px;
+  }
+
+  .btn-container {
+    display: flex;
+    padding: 5px 10px 5px;
+    justify-content: space-around;
+  }
+
   .content {
     margin-top: 40px;
   }
@@ -34,15 +53,31 @@
   }
 </style>
 <script>
-  import {Toast} from 'mint-ui';
+  import {Toast, MessageBox} from 'mint-ui';
   import SingleSelector from '../components/singleSelector.vue'
   import DialogUtil from '../common/DialogUtil'
 
   export default {
     methods: {
       showDialog(){
-        DialogUtil.showPrompt('请输入密码',function (v1, v2) {
-          console.info('value='+v1+';action='+v2)
+        DialogUtil.showPrompt('请输入密码', function (v1, v2) {
+          console.info('value=' + v1 + ';action=' + v2)
+        })
+      },
+      showPrompt(){
+        let that = this;
+        //inputPattern: /^\d+$/
+        MessageBox.prompt('请输入密码', {
+          inputValidator: (val) => {
+            if (val === null) {
+              return true;//初始化的值为null，不做处理的话，刚打开MessageBox就会校验出错，影响用户体验
+            }
+            return !(val.length < 6 || val.length > 8)
+          }, inputErrorMessage: '密码长度必须在6~8位'
+        }).then((val) => {
+          console.info('confirm,value is' + val.value)
+        }, () => {
+          console.info('cancel')
         })
       },
       toggle(){
@@ -63,6 +98,7 @@
     },
     data(){
       return {
+        errMsg: '请输入正确的内容',
         showOperator: true,
         showCheckbox: false,
         valueKey: 'text',

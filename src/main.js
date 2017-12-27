@@ -16,8 +16,6 @@ Vue.use(MintUI);
 Vue.use(fullscreen);
 Vue.use(ElementUI);
 
-/*Vue.config.productionTip = false;*/
-
 
 new Vue({
   el: '#app',
@@ -25,4 +23,16 @@ new Vue({
   store,
   template: '<App/>',
   components: {App}
-});
+})
+
+/*Vue.config.productionTip = false;*/
+/*document.addEventListener('deviceready', function() {
+  new Vue({
+    el: '#app',
+    router,
+    store,
+    template: '<App/>',
+    components: {App}
+  })
+  window.navigator.splashscreen.hide()
+}, false);*/

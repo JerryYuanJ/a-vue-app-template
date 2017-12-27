@@ -20,9 +20,9 @@
     data(){
       return {
         selected: this.$store.state.selectedTab,
-        img1: "static/home_selected.png",
-        img3: "static/tool.png",
-        img5: "src/assets/logo.png"
+        img1: "/src/assets/tool/home_selected.png",
+        img3: "/src/assets/tool/tool.png",
+        img5: "/src/assets/tool/logo.png"
       }
     },
     computed: {
@@ -33,23 +33,23 @@
     watch: {
       'selected': {
         handler(){
-          if (this.selected == "main") {
+          if (this.selected === "main") {
             this.$router.push('/main');
-            this.img1 = "static/home_selected.png"
+            this.img1 = "/src/assets/tool/home_selected.png"
           } else {
-            this.img1 = "static/home.png"
+            this.img1 = "/src/assets/tool/home.png"
           }
-          if (this.selected == "tool") {
+          if (this.selected === "tool") {
             this.$router.push('/tool');
-            this.img3 = 'static/tool_selected.png'
+            this.img3 = '/src/assets/tool/tool_selected.png'
           } else {
-            this.img3 = 'static/tool.png'
+            this.img3 = '/src/assets/tool/tool.png'
           }
-          if (this.selected == "my") {
-            this.$router.push('/my')
-            this.img5 = "static/user_selected.png";
+          if (this.selected === "my") {
+            this.$router.push('/my');
+            this.img5 = "/src/assets/tool/user_selected.png";
           } else {
-            this.img5 = "static/user.png";
+            this.img5 = "/src/assets/tool/user.png";
           }
         }
       }
