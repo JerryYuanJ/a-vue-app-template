@@ -13,6 +13,11 @@ const express = require('express')
 const app = express()
 var appData = require('../mock/data.json')
 var my = appData.my;
+var chartData = appData.heList;
+//对比图
+var contrastData = appData.rows;
+//趋势图
+var trentData = appData.rows1;
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 
@@ -41,13 +46,30 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       poll: config.dev.poll,
     },
     before(app){
-        app.get('/api/my', (req, res) => {
-          res.json({
-            // 这里是你的json内容
-            errno: 0,
-            data: my
-          })
+      app.get('/api/my', (req, res) => {
+        res.json({
+          errno: 0,
+          data: my
         })
+      });
+      app.get('/api/chart', (req, res) => {
+        res.json({
+          errno: 0,
+          data: chartData
+        })
+      });
+      app.get('/api/contrast', (req, res) => {
+        res.json({
+          errno: 0,
+          data: contrastData
+        })
+      });
+      app.get('/api/trend', (req, res) => {
+        res.json({
+          errno: 0,
+          data: trentData
+        })
+      });
     }
   },
   plugins: [

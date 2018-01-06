@@ -17,9 +17,10 @@
 </template>
 <style>
   #chart-container {
-    margin-top: 140px;
+    margin-top: 40px;
   }
-  #myChart{
+
+  #myChart {
     margin: 0 auto;
     width: calc(100% - 20px);
     height: 162px;
@@ -27,6 +28,9 @@
   }
 </style>
 <script>
+
+  import axios from 'axios';
+
 
   export default {
     data(){
@@ -46,7 +50,11 @@
             that.drawLine();
           }
         }],
-        chartType: 'line'
+        chartType: 'line',
+        chart: {},
+        legendData: [],
+        xData: [],
+        yData: []
       }
     },
     created(){
@@ -56,22 +64,49 @@
       }
     },
     mounted(){
-      this.drawLine();
+      let that = this;
+      axios.get('/api/chart').then((res) => {
+        that.chart = res.data.data;
+        this.drawLine(that.chart);
+      });
     },
     methods: {
       showSheet() {
         this.sheetVisible = true
       },
-      drawLine(){
+      drawLine(chartData){
+
+        let legendData = [];
+        let xData = [];
+        let seriesData = [];
+
+        for (let item of chartData) {
+          legendData.push(item['contrastDimension']);
+          let temp = [];
+          for (let cItem of item.chart) {
+            temp.push(cItem.contrastValue);
+          }
+          let obj = {
+            name: item['contrastDimension'],
+            type: 'line',
+            data: temp
+          }
+          seriesData.push(obj);
+        }
+        console.info('seriesData=' + JSON.stringify(seriesData));
+        for (let one of chartData[0].chart) {
+          xData.push(one.numDateStr);
+        }
+        console.info('xData='+xData);
         // 基于准备好的dom，初始化echarts实例
         let myChart = this.$echarts.init(document.getElementById('myChart'));
         // 绘制图表
-        myChart.setOption({
+        let option = {
           color: ['#3398DB', '#ef1111'],
-          title:{
-              show:true,
-              text:'测试标题',
-              left:'right'
+          title: {
+            show: true,
+            text: chartData[0].chartName,
+            left: 'center'
           },
           tooltip: {
             trigger: 'axis',
@@ -79,35 +114,28 @@
               type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
             }
           },
-          /*//提示块，可点击
+          //提示块，可点击
           legend: {
             x: 'center',
-            data: ['第一季度', '第二季度'],
-            top: 50,
-            selectedMode: 'multiple',
-          },*/
+            data: legendData,
+            top: 30,
+            //selectedMode: false,
+          },
           //X轴
           xAxis: {
-            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子"]
+            data: xData
           },
           grid: {
-            show: true,
-            top: 30,//grid 组件离容器上侧的距离,默认60;上同
-            left:'10%',
-            right:10
+            show: true,//grid 组件离容器上侧的距离,默认60;上同
+            top: 60,
+            left: '10%',
+            right: 10
           },
           yAxis: {},
           //显示数据
-          series: [{
-            name: '第一季度',
-            type: this.chartType,
-            data: [5, 20,0, 360]
-          }, {
-            name: '第二季度',
-            type: this.chartType,
-            data: [51, 2, 190, 26]
-          }]
-        });
+          series: seriesData
+        };
+        myChart.setOption(option);
       }
     }
   }

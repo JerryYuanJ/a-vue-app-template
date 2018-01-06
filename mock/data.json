@@ -59,5 +59,776 @@
     "tel": "13698712233",
     "joinDate": "2016-09-12",
     "dept": "TECH·移动一组"
-  }
+  },
+  "heList": [
+    {
+      "chartName": "测试表格1",
+      "contrastDimension": "第一条线",
+      "chart": [
+        {
+          "numId": 12,
+          "numDateStr": "2017-04",
+          "contrastValue": 12.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 13,
+          "numDateStr": "2017-06",
+          "contrastValue": 23.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 14,
+          "numDateStr": "2017-07",
+          "contrastValue": 2.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 15,
+          "numDateStr": "2017-09",
+          "contrastValue": 40.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 16,
+          "numDateStr": "2017-11",
+          "contrastValue": 29.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 17,
+          "numDateStr": "2017-12",
+          "contrastValue": 50.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 18,
+          "numDateStr": "2018-01",
+          "contrastValue": 112.00,
+          "startDate": null,
+          "endDate": null
+        }
+      ]
+    },
+    {
+      "chartName": "测试表格2",
+      "contrastDimension": "第二条线",
+      "chart": [
+        {
+          "numId": 22,
+          "numDateStr": "2017-04",
+          "contrastValue": 23.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 23,
+          "numDateStr": "2017-06",
+          "contrastValue": 19.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 24,
+          "numDateStr": "2017-07",
+          "contrastValue": 25.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 25,
+          "numDateStr": "2017-09",
+          "contrastValue": 67.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 26,
+          "numDateStr": "2017-11",
+          "contrastValue": 49.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 27,
+          "numDateStr": "2017-12",
+          "contrastValue": 51.00,
+          "startDate": null,
+          "endDate": null
+        },
+        {
+          "numId": 28,
+          "numDateStr": "2018-01",
+          "contrastValue": 12.00,
+          "startDate": null,
+          "endDate": null
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "objectVersionNumber": 2,
+      "contrastId": 1,
+      "headerId": 11,
+      "contrastName": "测试对比图",
+      "employeeCode": "ADMIN",
+      "page": 1,
+      "pageSize": 5,
+      "xxgxChartHeaders": [
+        {
+          "chartName": "测试对比图",
+          "contrastDimension": "2017年12月份",
+          "charts": [
+            {
+              "numDateStr": "12-06",
+              "contrastValue": "122.00"
+            },
+            {
+              "numDateStr": "12-07",
+              "contrastValue": "120.00"
+            },
+            {
+              "numDateStr": "12-08",
+              "contrastValue": "119.00"
+            },
+            {
+              "numDateStr": "12-09",
+              "contrastValue": "122.00"
+            },
+            {
+              "numDateStr": "12-10",
+              "contrastValue": "120.00"
+            },
+            {
+              "numDateStr": "12-11",
+              "contrastValue": "121.00"
+            },
+            {
+              "numDateStr": "12-22",
+              "contrastValue": "59.00"
+            }
+          ]
+        },
+        {
+          "chartName": "测试对比图",
+          "contrastDimension": "2017年11月份",
+          "charts": [
+            {
+              "numDateStr": "11-01",
+              "contrastValue": "190.00"
+            },
+            {
+              "numDateStr": "11-02",
+              "contrastValue": "192.00"
+            },
+            {
+              "numDateStr": "11-03",
+              "contrastValue": "194.00"
+            },
+            {
+              "numDateStr": "11-04",
+              "contrastValue": "196.00"
+            },
+            {
+              "numDateStr": "11-05",
+              "contrastValue": "198.00"
+            },
+            {
+              "numDateStr": "11-06",
+              "contrastValue": "200.00"
+            },
+            {
+              "numDateStr": "11-07",
+              "contrastValue": "202.00"
+            },
+            {
+              "numDateStr": "11-08",
+              "contrastValue": "204.00"
+            },
+            {
+              "numDateStr": "11-09",
+              "contrastValue": "206.00"
+            },
+            {
+              "numDateStr": "11-10",
+              "contrastValue": "208.00"
+            },
+            {
+              "numDateStr": "11-11",
+              "contrastValue": "210.00"
+            },
+            {
+              "numDateStr": "11-12",
+              "contrastValue": "212.00"
+            },
+            {
+              "numDateStr": "11-13",
+              "contrastValue": "214.00"
+            },
+            {
+              "numDateStr": "11-14",
+              "contrastValue": "216.00"
+            },
+            {
+              "numDateStr": "11-15",
+              "contrastValue": "218.00"
+            },
+            {
+              "numDateStr": "11-16",
+              "contrastValue": "220.00"
+            },
+            {
+              "numDateStr": "11-17",
+              "contrastValue": "222.00"
+            },
+            {
+              "numDateStr": "11-18",
+              "contrastValue": "224.00"
+            },
+            {
+              "numDateStr": "11-19",
+              "contrastValue": "226.00"
+            },
+            {
+              "numDateStr": "11-20",
+              "contrastValue": "228.00"
+            },
+            {
+              "numDateStr": "11-21",
+              "contrastValue": "230.00"
+            },
+            {
+              "numDateStr": "11-22",
+              "contrastValue": "232.00"
+            },
+            {
+              "numDateStr": "11-23",
+              "contrastValue": "234.00"
+            },
+            {
+              "numDateStr": "11-24",
+              "contrastValue": "236.00"
+            },
+            {
+              "numDateStr": "11-25",
+              "contrastValue": "238.00"
+            },
+            {
+              "numDateStr": "11-26",
+              "contrastValue": "240.00"
+            },
+            {
+              "numDateStr": "11-27",
+              "contrastValue": "242.00"
+            },
+            {
+              "numDateStr": "11-28",
+              "contrastValue": "244.00"
+            },
+            {
+              "numDateStr": "11-29",
+              "contrastValue": "246.00"
+            },
+            {
+              "numDateStr": "11-30",
+              "contrastValue": "248.00"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rows1": [
+    {
+      "objectVersionNumber": 1,
+      "trentId": 3,
+      "headerId": 12,
+      "trentName": "测试员工编号",
+      "employeeCode": "ADMIN",
+      "page": 1,
+      "pageSize": 5,
+      "xxgxChartHeaders": [
+        {
+          "chartName": "测试员工编号",
+          "contrastDimension": "维度1",
+          "charts": [
+            {
+              "numDateStr": "2017-11-01",
+              "contrastValue": "190.00"
+            },
+            {
+              "numDateStr": "2017-11-02",
+              "contrastValue": "192.00"
+            },
+            {
+              "numDateStr": "2017-11-03",
+              "contrastValue": "194.00"
+            },
+            {
+              "numDateStr": "2017-11-04",
+              "contrastValue": "196.00"
+            },
+            {
+              "numDateStr": "2017-11-05",
+              "contrastValue": "198.00"
+            },
+            {
+              "numDateStr": "2017-11-06",
+              "contrastValue": "200.00"
+            },
+            {
+              "numDateStr": "2017-11-07",
+              "contrastValue": "202.00"
+            },
+            {
+              "numDateStr": "2017-11-08",
+              "contrastValue": "204.00"
+            },
+            {
+              "numDateStr": "2017-11-09",
+              "contrastValue": "206.00"
+            },
+            {
+              "numDateStr": "2017-11-10",
+              "contrastValue": "208.00"
+            },
+            {
+              "numDateStr": "2017-11-11",
+              "contrastValue": "210.00"
+            },
+            {
+              "numDateStr": "2017-11-12",
+              "contrastValue": "212.00"
+            },
+            {
+              "numDateStr": "2017-11-13",
+              "contrastValue": "214.00"
+            },
+            {
+              "numDateStr": "2017-11-14",
+              "contrastValue": "216.00"
+            },
+            {
+              "numDateStr": "2017-11-15",
+              "contrastValue": "218.00"
+            },
+            {
+              "numDateStr": "2017-11-16",
+              "contrastValue": "220.00"
+            },
+            {
+              "numDateStr": "2017-11-17",
+              "contrastValue": "222.00"
+            },
+            {
+              "numDateStr": "2017-11-18",
+              "contrastValue": "224.00"
+            },
+            {
+              "numDateStr": "2017-11-19",
+              "contrastValue": "226.00"
+            },
+            {
+              "numDateStr": "2017-11-20",
+              "contrastValue": "228.00"
+            },
+            {
+              "numDateStr": "2017-11-21",
+              "contrastValue": "230.00"
+            },
+            {
+              "numDateStr": "2017-11-22",
+              "contrastValue": "232.00"
+            },
+            {
+              "numDateStr": "2017-11-23",
+              "contrastValue": "234.00"
+            },
+            {
+              "numDateStr": "2017-11-24",
+              "contrastValue": "236.00"
+            },
+            {
+              "numDateStr": "2017-11-25",
+              "contrastValue": "238.00"
+            },
+            {
+              "numDateStr": "2017-11-26",
+              "contrastValue": "240.00"
+            },
+            {
+              "numDateStr": "2017-11-27",
+              "contrastValue": "242.00"
+            },
+            {
+              "numDateStr": "2017-11-28",
+              "contrastValue": "244.00"
+            },
+            {
+              "numDateStr": "2017-11-29",
+              "contrastValue": "246.00"
+            },
+            {
+              "numDateStr": "2017-11-30",
+              "contrastValue": "248.00"
+            },
+            {
+              "numDateStr": "2017-12-06",
+              "contrastValue": "122.00"
+            },
+            {
+              "numDateStr": "2017-12-07",
+              "contrastValue": "120.00"
+            },
+            {
+              "numDateStr": "2017-12-08",
+              "contrastValue": "119.00"
+            },
+            {
+              "numDateStr": "2017-12-09",
+              "contrastValue": "122.00"
+            },
+            {
+              "numDateStr": "2017-12-10",
+              "contrastValue": "120.00"
+            },
+            {
+              "numDateStr": "2017-12-11",
+              "contrastValue": "121.00"
+            },
+            {
+              "numDateStr": "2017-12-22",
+              "contrastValue": "59.00"
+            }
+          ]
+        },
+        {
+          "chartName": "测试员工编号",
+          "contrastDimension": "基本维度_WTI",
+          "charts": [
+            {
+              "numDateStr": "2017-11-01",
+              "contrastValue": "100.00"
+            },
+            {
+              "numDateStr": "2017-11-02",
+              "contrastValue": "101.00"
+            },
+            {
+              "numDateStr": "2017-11-03",
+              "contrastValue": "102.00"
+            },
+            {
+              "numDateStr": "2017-11-04",
+              "contrastValue": "103.00"
+            },
+            {
+              "numDateStr": "2017-11-05",
+              "contrastValue": "104.00"
+            },
+            {
+              "numDateStr": "2017-11-06",
+              "contrastValue": "105.00"
+            },
+            {
+              "numDateStr": "2017-11-07",
+              "contrastValue": "106.00"
+            },
+            {
+              "numDateStr": "2017-11-08",
+              "contrastValue": "107.00"
+            },
+            {
+              "numDateStr": "2017-11-09",
+              "contrastValue": "108.00"
+            },
+            {
+              "numDateStr": "2017-11-10",
+              "contrastValue": "109.00"
+            },
+            {
+              "numDateStr": "2017-11-11",
+              "contrastValue": "110.00"
+            },
+            {
+              "numDateStr": "2017-11-12",
+              "contrastValue": "111.00"
+            },
+            {
+              "numDateStr": "2017-11-13",
+              "contrastValue": "112.00"
+            },
+            {
+              "numDateStr": "2017-11-14",
+              "contrastValue": "113.00"
+            },
+            {
+              "numDateStr": "2017-11-15",
+              "contrastValue": "114.00"
+            },
+            {
+              "numDateStr": "2017-11-16",
+              "contrastValue": "115.00"
+            },
+            {
+              "numDateStr": "2017-11-17",
+              "contrastValue": "116.00"
+            },
+            {
+              "numDateStr": "2017-11-18",
+              "contrastValue": "117.00"
+            },
+            {
+              "numDateStr": "2017-11-19",
+              "contrastValue": "118.00"
+            },
+            {
+              "numDateStr": "2017-11-20",
+              "contrastValue": "119.00"
+            },
+            {
+              "numDateStr": "2017-11-21",
+              "contrastValue": "120.00"
+            },
+            {
+              "numDateStr": "2017-11-22",
+              "contrastValue": "121.00"
+            },
+            {
+              "numDateStr": "2017-11-23",
+              "contrastValue": "122.00"
+            },
+            {
+              "numDateStr": "2017-11-24",
+              "contrastValue": "123.00"
+            },
+            {
+              "numDateStr": "2017-11-25",
+              "contrastValue": "124.00"
+            },
+            {
+              "numDateStr": "2017-11-26",
+              "contrastValue": "125.00"
+            },
+            {
+              "numDateStr": "2017-11-27",
+              "contrastValue": "126.00"
+            },
+            {
+              "numDateStr": "2017-11-28",
+              "contrastValue": "127.00"
+            },
+            {
+              "numDateStr": "2017-11-29",
+              "contrastValue": "128.00"
+            },
+            {
+              "numDateStr": "2017-11-30",
+              "contrastValue": "129.00"
+            },
+            {
+              "numDateStr": "2017-12-06",
+              "contrastValue": "0.00"
+            },
+            {
+              "numDateStr": "2017-12-07",
+              "contrastValue": "120.00"
+            },
+            {
+              "numDateStr": "2017-12-08",
+              "contrastValue": "0.00"
+            },
+            {
+              "numDateStr": "2017-12-09",
+              "contrastValue": "122.00"
+            },
+            {
+              "numDateStr": "2017-12-10",
+              "contrastValue": "120.00"
+            },
+            {
+              "numDateStr": "2017-12-11",
+              "contrastValue": "121.00"
+            },
+            {
+              "numDateStr": "2017-12-22",
+              "contrastValue": "0.00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "objectVersionNumber": 1,
+      "trentId": 4,
+      "headerId": 13,
+      "trentName": "测试",
+      "employeeCode": "ADMIN",
+      "page": 1,
+      "pageSize": 5,
+      "xxgxChartHeaders": [
+        {
+          "chartName": "测试",
+          "contrastDimension": "基本维度_BRENT",
+          "charts": [
+            {
+              "numDateStr": "2017-11-01",
+              "contrastValue": "90.00"
+            },
+            {
+              "numDateStr": "2017-11-02",
+              "contrastValue": "91.00"
+            },
+            {
+              "numDateStr": "2017-11-03",
+              "contrastValue": "92.00"
+            },
+            {
+              "numDateStr": "2017-11-04",
+              "contrastValue": "93.00"
+            },
+            {
+              "numDateStr": "2017-11-05",
+              "contrastValue": "94.00"
+            },
+            {
+              "numDateStr": "2017-11-06",
+              "contrastValue": "95.00"
+            },
+            {
+              "numDateStr": "2017-11-07",
+              "contrastValue": "96.00"
+            },
+            {
+              "numDateStr": "2017-11-08",
+              "contrastValue": "97.00"
+            },
+            {
+              "numDateStr": "2017-11-09",
+              "contrastValue": "98.00"
+            },
+            {
+              "numDateStr": "2017-11-10",
+              "contrastValue": "99.00"
+            },
+            {
+              "numDateStr": "2017-11-11",
+              "contrastValue": "100.00"
+            },
+            {
+              "numDateStr": "2017-11-12",
+              "contrastValue": "101.00"
+            },
+            {
+              "numDateStr": "2017-11-13",
+              "contrastValue": "102.00"
+            },
+            {
+              "numDateStr": "2017-11-14",
+              "contrastValue": "103.00"
+            },
+            {
+              "numDateStr": "2017-11-15",
+              "contrastValue": "104.00"
+            },
+            {
+              "numDateStr": "2017-11-16",
+              "contrastValue": "105.00"
+            },
+            {
+              "numDateStr": "2017-11-17",
+              "contrastValue": "106.00"
+            },
+            {
+              "numDateStr": "2017-11-18",
+              "contrastValue": "107.00"
+            },
+            {
+              "numDateStr": "2017-11-19",
+              "contrastValue": "108.00"
+            },
+            {
+              "numDateStr": "2017-11-20",
+              "contrastValue": "109.00"
+            },
+            {
+              "numDateStr": "2017-11-21",
+              "contrastValue": "110.00"
+            },
+            {
+              "numDateStr": "2017-11-22",
+              "contrastValue": "111.00"
+            },
+            {
+              "numDateStr": "2017-11-23",
+              "contrastValue": "112.00"
+            },
+            {
+              "numDateStr": "2017-11-24",
+              "contrastValue": "113.00"
+            },
+            {
+              "numDateStr": "2017-11-25",
+              "contrastValue": "114.00"
+            },
+            {
+              "numDateStr": "2017-11-26",
+              "contrastValue": "115.00"
+            },
+            {
+              "numDateStr": "2017-11-27",
+              "contrastValue": "116.00"
+            },
+            {
+              "numDateStr": "2017-11-28",
+              "contrastValue": "117.00"
+            },
+            {
+              "numDateStr": "2017-11-29",
+              "contrastValue": "118.00"
+            },
+            {
+              "numDateStr": "2017-11-30",
+              "contrastValue": "119.00"
+            },
+            {
+              "numDateStr": "2017-12-06",
+              "contrastValue": "122.00"
+            },
+            {
+              "numDateStr": "2017-12-07",
+              "contrastValue": "0.00"
+            },
+            {
+              "numDateStr": "2017-12-08",
+              "contrastValue": "119.00"
+            },
+            {
+              "numDateStr": "2017-12-09",
+              "contrastValue": "0.00"
+            },
+            {
+              "numDateStr": "2017-12-10",
+              "contrastValue": "0.00"
+            },
+            {
+              "numDateStr": "2017-12-11",
+              "contrastValue": "0.00"
+            },
+            {
+              "numDateStr": "2017-12-22",
+              "contrastValue": "59.00"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
