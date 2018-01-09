@@ -7,7 +7,7 @@ import MintUI from 'mint-ui'
 import store from './store/index.js'
 import echarts from 'echarts'
 import fullscreen from 'vue-fullscreen'
-import ElementUI from 'element-ui'
+
 
 
 Vue.prototype.$echarts = echarts;
