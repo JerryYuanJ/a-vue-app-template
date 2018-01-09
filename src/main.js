@@ -14,7 +14,7 @@ Vue.prototype.$echarts = echarts;
 
 Vue.use(MintUI);
 Vue.use(fullscreen);
-Vue.use(ElementUI);
+
 
 
 new Vue({
