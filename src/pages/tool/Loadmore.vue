@@ -6,9 +6,11 @@
       </router-link>
     </mt-header>
     <div class="content">
-      <mt-loadmore :top-method="loadTop"
+      <mt-loadmore style="min-height: 100%;overflow: auto"
+        :top-method="loadTop"
                    :bottom-all-loaded="bottomAllLoaded"
                    :auto-fill="false"
+                   @bottom-status-change="handleBottomChange"
                    @top-status-change="handleTopChange"
                    :bottom-method="loadBottom" ref="loadmore">
 
@@ -17,7 +19,11 @@
           <span v-show="topStatus === 'drop'">我在加载数据</span>
           <span v-show="topStatus === 'pull'">下拉我就更新给你看</span>
         </div>
-
+        <div slot="bottom" class="mint-loadmore-bottom" v-show="!bottomAllLoaded">
+          <span v-show="bottomStatus === 'drop'">释放更新</span>
+          <span v-show="bottomStatus === 'pull'">上拉加载更多</span>
+          <span v-show="bottomStatus === 'loading'">Loading...</span>
+        </div>
         <mt-cell-swipe
           @click.native="clickMe"
           v-for="(item,index) in list"
@@ -49,6 +55,7 @@
       return {
         bottomAllLoaded: false,
         topStatus: '',
+        bottomStatus:'',
         list: []
       }
     },
@@ -73,7 +80,7 @@
 
       },
       loadBottom(){
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 2; i++) {
           this.list.push('push' + i)
         }
         if (this.list.length > 100) {
@@ -83,10 +90,13 @@
       },
       handleTopChange(status){
         this.topStatus = status;
-      }
+      },
+      handleBottomChange(status) {
+        this.bottomStatus = status;
+      },
     },
     mounted(){
-      for (let i = 0; i < 40; i++) {
+      for (let i = 0; i < 10; i++) {
         this.list.push(i)
       }
     }

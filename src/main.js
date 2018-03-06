@@ -12,7 +12,6 @@ import echarts from 'echarts'
 Vue.prototype.$echarts = echarts;
 
 Vue.use(MintUI);
-Vue.use(fullscreen);
 
 
 
