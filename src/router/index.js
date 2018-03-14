@@ -9,6 +9,7 @@ import Chart from '../pages/tool/chart2.vue'
 import Loadmore from '../pages/tool/Loadmore.vue'
 import MyInfo from '../pages/my/MyInfo.vue'
 import Workflow from '../pages/tool/Workflow.vue'
+import Chart1 from '../pages/mchart.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -34,8 +35,11 @@ export default new Router({
     },
     {
       path: '/my/myinfo', component: MyInfo
-    }, {
+    },
+    {
       path: '/tool/workflow', component: Workflow
+    },{
+      path: '/chart1', component: Chart1
     }
   ]
 })
