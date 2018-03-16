@@ -108,13 +108,23 @@
             this.$emit('load', resolve);
           }).then(() => {
             //这里的操作主要是将移动的距离还原,用一个定时器慢慢将marginTop的值减回去直到0为止
-            if (that.moveDistance > 0) {
-              let timer = setInterval(function () {
-                that.el.style.marginTop = --that.moveDistance + 'px';
-                if (Number(that.el.style.marginTop.split('px')[0]) <= 0) clearInterval(timer);
-              }, 1)
-            }
+            that._resetBox();
           });
+        } else {
+          this._resetBox();
+        }
+      },
+      /**
+       * 重置视图
+       * @private
+       */
+      _resetBox(){
+        let that = this;
+        if (this.moveDistance > 0) {
+          let timer = setInterval(function () {
+            that.el.style.marginTop = --that.moveDistance + 'px';
+            if (Number(that.el.style.marginTop.split('px')[0]) <= 0) clearInterval(timer);
+          }, 1)
         }
       }
     },

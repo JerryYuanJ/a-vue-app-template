@@ -55,7 +55,7 @@
             this.players.unshift('player No.' + Math.floor(Math.random() * 10) + 1);
           }
           resolve();
-        }, 2000)
+        }, 1000)
       }
     }
   }
