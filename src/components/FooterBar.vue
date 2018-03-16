@@ -10,9 +10,6 @@
       <mt-tab-item id="my">
         <img :src="img5" slot="icon">我的
       </mt-tab-item>
-      <mt-tab-item id="chart">
-        <img :src="img6" slot="icon">图表
-      </mt-tab-item>
     </mt-tabbar>
   </div>
 </template>
@@ -25,8 +22,7 @@
         selected: this.$store.state.selectedTab,
         img1: "/src/assets/tool/home_selected.png",
         img3: "/src/assets/tool/tool.png",
-        img5: "/src/assets/tool/user.png",
-        img6: "/src/assets/tool/chart-o.png"
+        img5: "/src/assets/tool/user.png"
       }
     },
     computed: {
@@ -54,12 +50,6 @@
             this.img5 = "/src/assets/tool/user_selected.png";
           } else {
             this.img5 = "/src/assets/tool/user.png";
-          }
-          if (this.selected === "chart") {
-            this.$router.push('/chart1');
-            this.img6 = "/src/assets/tool/chart-o-selected.png";
-          } else {
-            this.img6 = "/src/assets/tool/chart-o.png";
           }
         }
       }

@@ -102,7 +102,8 @@
   export default {
     methods: {
       go(index){
-        this.$router.push('/tool/' + index);
+        index === 'chart' ? this.$router.push('/chartBox') :
+          this.$router.push('/tool/' + index);
       }
     },
     created(){

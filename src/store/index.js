@@ -11,9 +11,13 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     footerVisible: true,
-    selectedTab: 'main'
+    selectedTab: 'main',
+    chartType:''
   },
   mutations: {
+    setChartType(state, param){
+      state.chartType = param
+    },
     [types.TOGGLE_FOOTER] (state) {
       state.footerVisible = !state.footerVisible
     },
