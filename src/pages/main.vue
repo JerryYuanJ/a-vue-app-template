@@ -10,22 +10,7 @@
 
       <div class="line-divider"></div>
 
-      <mt-cell title="请选择英雄">
-        <div @click="choose">{{chooseText}}</div>
-      </mt-cell>
 
-      <div class="line-divider"></div>
-
-
-      <div class="btn-container">
-        <mt-button type="danger" size="small" @click="showDialog">测试Dialog</mt-button>
-
-        <mt-button type="primary" size="small" @click="showPrompt">测试MessageBox的校验</mt-button>
-      </div>
-
-
-      <single-selector :popupVisible="showPop" :slotsData="sData" @toggle="toggleSelector"
-                       :valueKey="valueKey"></single-selector>
 
     </div>
   </div>
@@ -33,24 +18,10 @@
 <style scoped>
 
 
-  .line-divider {
-    background-color: #bfcbd9;
-    height: 1px;
-  }
-
-  .btn-container {
-    display: flex;
-    padding: 10px 10px 5px;
-    justify-content: space-around;
-  }
-
   .content {
     margin-top: 40px;
   }
 
-  .el-table td, .el-table th {
-    padding: 0;
-  }
 </style>
 <script>
   import {Toast, MessageBox} from 'mint-ui';

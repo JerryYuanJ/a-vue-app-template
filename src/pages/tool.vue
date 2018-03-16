@@ -33,7 +33,7 @@
         </div>
         <div @click="go('workflow')">
           <img src="../assets/tool/workflow.png"/>
-          <span>工作流</span>
+          <span>其它测试</span>
         </div>
       </div>
     </div>

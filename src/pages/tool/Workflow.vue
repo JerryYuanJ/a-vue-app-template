@@ -1,88 +1,75 @@
 <!--
     @CreationDate:2017/12/16
     @Author:袁杰
-    @Function:工作流测试界面
+    @Function:测试界面
 -->
 <template>
   <div id="work-flow">
 
-    <my-tab :selectedIndex="selectTabIndex" @select="selectTab" :textField="textField" :valueField="valueField"
-            :tabData="tabData"></my-tab>
 
-    <div class="approve-bar">
-      <div plain size="small" class="approve-bar-yes" @click="approve('y')">同意</div>
-      <div plain size="small" class="approve-bar-no" @click="approve('n')">拒绝</div>
-      <div plain size="small" class="approve-bar-back" @click="approve('b')">回退</div>
-      <div plain size="small" class="approve-bar-abort" @click="approve('s')">终止</div>
+    <mt-header fixed title="测试界面">
+      <router-link to="/tool" slot="left">
+        <mt-button icon="back">返回</mt-button>
+      </router-link>
+    </mt-header>
+
+    <div class="content">
+      <mt-cell title="请选择英雄">
+        <div @click="choose">{{chooseText}}</div>
+      </mt-cell>
+
+      <div class="line-divider"></div>
+
+
+      <div class="btn-container">
+        <div>
+          <mt-button type="danger" size="small" @click="showDialog">测试Dialog</mt-button>
+        </div>
+        <div>
+          <mt-button type="primary" size="small" @click="showPrompt">测试MessageBox的校验</mt-button>
+        </div>
+      </div>
+
+      <div class="line-divider"></div>
+
+      <single-selector :popupVisible="showPop" :slotsData="sData" @toggle="toggleSelector"
+                       :valueKey="valueKey"></single-selector>
     </div>
+
   </div>
 </template>
-<style>
-  .approve-bar {
-    display: flex;
-    z-index: 999;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    height: 50px;
-    background-color: whitesmoke;
-  }
-
-  .approve-bar-yes {
-    color: green;
-    width: 25%;
-    text-align: center;
-    height: 100%;
-    line-height: 50px;
-  }
-
-  .approve-bar-no {
-    color: red;
-    width: 25%;
-    text-align: center;
-    height: 100%;
-    line-height: 50px;
-  }
-
-  .approve-bar-back {
-    color: blue;
-    width: 25%;
-    text-align: center;
-    height: 100%;
-    line-height: 50px;
-  }
-
-  .approve-bar-abort {
-    color: maroon;
-    width: 25%;
-    text-align: center;
-    height: 100%;
-    line-height: 50px;
-  }
-
-  input {
-    height: 30px;
+<style scoped lang="scss">
+  #work-flow {
+    .content {
+      margin-top: 40px;
+      .line-divider {
+        background-color: #bfcbd9;
+        height: 1px;
+      }
+      .btn-container {
+        margin-top: 10px;
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10px;
+        }
+        div:last-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 </style>
 <script>
 
-  import Tabbar from '../../components/Tabbar'
   import {Toast, Indicator, MessageBox} from 'mint-ui';
+  import SingleSelector from '../../components/singleSelector.vue'
+  import DialogUtil from '../../common/DialogUtil'
 
   export default {
     data(){
-      return {
-        selectTabIndex: 0,
-        textField: 'text',
-        valueField: 'id',
-        tabData: [{text: '湖人', id: '01'}, {text: '勇士', id: '02'}, {text: '火箭', id: '03'}, {text: '尼克斯', id: '04'}]
-      }
-    },
-    components: {
-      'my-tab': Tabbar
+      return {}
     },
     created(){
       let _footer = this.$store.state.footerVisible;
@@ -91,47 +78,81 @@
       }
     },
     methods: {
-      selectTab(tabIndex){
-        console.info('select ' + tabIndex);
-        if (tabIndex === 'all') {
-          this.selectTabIndex = -1
-        } else {
-          this.selectTabIndex = tabIndex
-        }
-
+      showDialog(){
+        DialogUtil.showPrompt('请输入密码', function (v1, v2) {
+          console.info('value=' + v1 + ';action=' + v2)
+        })
       },
-      approve(flag){
-        switch (flag) {
-          case 'y':
-            MessageBox.confirm('确认同意?', '提示').then(() => {
-            }, () => {
-            });
-            break;
-          case 'n':
-            MessageBox.prompt('请输入拒绝原因', '', {closeOnClickModal: false}).then(({value}) => {
-              console.info('原因为:' + value)
-            }, () => {
-
-            });
-            break;
-          case 'b':
-            MessageBox.prompt('请输入回退原因', '', {closeOnClickModal: false}).then(({value}) => {
-              console.info('原因为:' + value)
-            }, () => {
-
-            });
-            break;
-          case 's':
-            MessageBox.prompt('请输入终止原因', '', {closeOnClickModal: false}).then(({value}) => {
-              console.info('原因为:' + value)
-            }, () => {
-
-            });
-            break;
-          default:
-            break
-        }
+      showPrompt(){
+        let that = this;
+        //inputPattern: /^\d+$/
+        MessageBox.prompt('请输入密码', {
+          inputValidator: (val) => {
+            if (val === null) {
+              return true;//初始化的值为null，不做处理的话，刚打开MessageBox就会校验出错，影响用户体验
+            }
+            return !(val.length < 6 || val.length > 8)
+          }, inputErrorMessage: '密码长度必须在6~8位'
+        }).then((val) => {
+          console.info('confirm,value is' + val.value)
+        }, () => {
+          console.info('cancel')
+        })
+      },
+      toggle(){
+        this.showCheckbox = !this.showCheckbox;
+        this.showOperator = !this.showOperator;
+      },
+      choose(){
+        this.showPop = true
+      },
+      toggleSelector(text, value){
+        this.showPop = false;
+        this.chooseText = text;
+        this.chooseValue = value
       }
-    }
+    },
+    components: {
+      SingleSelector
+    },
+    data(){
+      return {
+        errMsg: '请输入正确的内容',
+        showOperator: true,
+        showCheckbox: false,
+        valueKey: 'text',
+        showPop: false,
+        chooseText: '请选择',
+        chooseValue: '',
+        sData: [
+          {
+            flex: 1,
+            values: [
+              {id: 100, text: '美国队长'}, {id: 101, text: '钢铁侠'}, {id: 103, text: '绿巨人'},
+              {id: 104, text: '幻视'}, {id: 105, text: '猩红女巫'}, {id: 106, text: '洛基'},
+              {id: 107, text: '雷神'}, {id: 108, text: '鹰眼'}],
+            className: 'slot1',
+            textAlign: 'center'
+          }
+        ],
+        right: [
+          {
+            content: '删除',
+            style: {background: 'red', color: '#fff', width: '50px', textAlign: 'center'},
+            handler: () => this.$messagebox({
+              title: '提示',
+              message: '确定执行此操作?',
+              showCancelButton: true
+            }).then((action) => {
+              if (action === 'confirm') {
+                Toast({message: '删除成功'})
+              } else {
+
+              }
+            })
+          }
+        ]
+      }
+    },
   }
 </script>
