@@ -21,6 +21,7 @@ const OppFunnel = r => require.ensure([], () => r(require('../pages/tool/chart/O
 const SaleRank = r => require.ensure([], () => r(require('../pages/tool/chart/SaleRank')), 'SaleRank')
 /*sassTest*/
 const SassTest = r => require.ensure([], () => r(require('../pages/tool/SassTest')), 'SassTest')
+const PullToRefreshPage = r => require.ensure([], () => r(require('../pages/tool/PullToRefreshPage')), 'PullToRefreshPage')
 
 
 Vue.use(Router);
@@ -52,6 +53,8 @@ export default new Router({
     },
     {
       path: '/tool/sassTest', component: SassTest
+    }, {
+      path: '/tool/refresh', component: PullToRefreshPage
     },
     {
       path: '/chartBox',
@@ -59,27 +62,27 @@ export default new Router({
       component: chartBox,
       children: [
         {
-          name:'CustomerCategory',
+          name: 'CustomerCategory',
           path: 'CustomerCategory',
           component: CustomerCategory
         },
         {
-          name:'MonthlySalesStatistics',
+          name: 'MonthlySalesStatistics',
           path: 'MonthlySalesStatistics',
           component: MonthlySalesStatistics
         },
         {
-          name:'MonthlyTask',
+          name: 'MonthlyTask',
           path: 'MonthlyTask',
           component: MonthlyTask
         },
         {
-          name:'OppFunnel',
+          name: 'OppFunnel',
           path: 'OppFunnel',
           component: OppFunnel
         },
         {
-          name:'SaleRank',
+          name: 'SaleRank',
           path: 'SaleRank',
           component: SaleRank
         }

@@ -42,7 +42,10 @@
           <img src="../assets/tool/css3.png"/>
           <span>Sass测试</span>
         </div>
-        <div></div>
+        <div @click="go('refresh')">
+          <img src="../assets/tool/refresh.png"/>
+          <span>下拉刷新</span>
+        </div>
         <div></div>
         <div></div>
       </div>
