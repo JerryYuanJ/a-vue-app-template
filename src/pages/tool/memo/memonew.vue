@@ -38,7 +38,7 @@
   }
 </style>
 <script>
-  import * as types from '../../store/index.js'
+  import * as types from '../../../store/index.js'
 
   export default {
     data(){

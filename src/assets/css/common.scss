@@ -1,0 +1,13 @@
+$fontSize: 15px;
+$fontColor: #000000;
+$lineColor: #eaeaea;
+
+$fontTitleColor: #ff00ff;
+$cellBgColor: #eaeaea55;
+
+@mixin commonCell($bgc:$cellBgColor) {
+  height: 40px;
+  line-height: 40px;
+  background-color: $bgc;
+}
+

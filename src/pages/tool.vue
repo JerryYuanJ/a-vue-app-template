@@ -36,6 +36,16 @@
           <span>其它测试</span>
         </div>
       </div>
+
+      <div class="apps">
+        <div @click="go('sassTest')">
+          <img src="../assets/tool/css3.png"/>
+          <span>Sass测试</span>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </div>
 </template>
@@ -73,7 +83,7 @@
   .apps div {
     display: flex;
     height: 70px;
-    width: 70px;
+    width: 25%;
     justify-content: center;
     align-items: center;
   }

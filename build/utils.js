@@ -60,6 +60,15 @@ exports.cssLoaders = function (options) {
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
+    //全局引入sass共有文件,但是这样的话,组件内是可以使用全局的变量了,可以使用的变量下面都有波浪线提示很烦
+    /* scss: generateLoaders('sass').concat(
+     {
+     loader: 'sass-resources-loader',
+     options: {
+     resources: path.resolve(__dirname, '../src/assets/css/common.scss')
+     }
+     }
+     ),*/
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }

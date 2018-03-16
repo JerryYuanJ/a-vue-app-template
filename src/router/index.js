@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import Main from '../pages/main.vue'
 import Tool from '../pages/tool.vue'
 import My from '../pages/my.vue'
-import MemoNew from '../pages/tool/memonew.vue'
-import MemoList from '../pages/tool/memolist.vue'
+import MemoNew from '../pages/tool/memo/memonew.vue'
+import MemoList from '../pages/tool/memo/memolist.vue'
 import Loadmore from '../pages/tool/Loadmore.vue'
 import MyInfo from '../pages/my/MyInfo.vue'
 import Workflow from '../pages/tool/Workflow.vue'
@@ -19,6 +19,8 @@ const MonthlySalesStatistics = r => require.ensure([], () => r(require('../pages
 const MonthlyTask = r => require.ensure([], () => r(require('../pages/tool/chart/MonthlyTask')), 'MonthlyTask')
 const OppFunnel = r => require.ensure([], () => r(require('../pages/tool/chart/OppFunnel')), 'OppFunnel')
 const SaleRank = r => require.ensure([], () => r(require('../pages/tool/chart/SaleRank')), 'SaleRank')
+/*sassTest*/
+const SassTest = r => require.ensure([], () => r(require('../pages/tool/SassTest')), 'SassTest')
 
 
 Vue.use(Router);
@@ -47,6 +49,9 @@ export default new Router({
     },
     {
       path: '/tool/workflow', component: Workflow
+    },
+    {
+      path: '/tool/sassTest', component: SassTest
     },
     {
       path: '/chartBox',
