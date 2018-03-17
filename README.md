@@ -1,34 +1,5 @@
 # a-vue-app-template
-
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-This demo-application is written in blog : http://blog.csdn.net/qq_25324335/article/details/78669960. Hope it can help you to develop a quick-start vue project.
-Contact me if you have some questions or find some bugs in my app.
+    这是一个基于vue-cli的全家桶示例项目，使用了vue-cli作为脚手架搭建。路由管理使用了vue-router，状态管理使用了vuex，网络请求使用了axios。
+    这是一个移动端的app项目示例，可根据此例进行一个H5应用的搭建，利用打包工具（如cordova）可以打包成原生应用。
+    项目主要包含三个Tab页：首页，应用页和个人管理页。
 
