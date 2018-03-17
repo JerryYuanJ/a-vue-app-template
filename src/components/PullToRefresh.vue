@@ -33,8 +33,6 @@
 </style>
 <script>
 
-  import {Indicator} from 'mint-ui'
-
   export default {
     name: 'PullToRefresh',
     data(){
@@ -107,7 +105,6 @@
           new Promise((resolve, reject) => {
             this.$emit('load', resolve);
           }).then(() => {
-            //这里的操作主要是将移动的距离还原,用一个定时器慢慢将marginTop的值减回去直到0为止
             that._resetBox();
           });
         } else {
@@ -116,7 +113,7 @@
       },
       /**
        * 重置视图
-       * @private
+       * 这里的操作主要是将移动的距离还原,用一个定时器慢慢将marginTop的值减回去直到0为止
        */
       _resetBox(){
         let that = this;
