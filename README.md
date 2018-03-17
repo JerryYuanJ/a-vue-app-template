@@ -25,8 +25,7 @@
     * 2018-03-17
       * 添加下拉刷新组件。自己写的一个组件，实现了下拉刷新功能，主要是探究类似组件的实现原理。
 # 博客
-    这个是我的个人博客，里面有对本项目的详细介绍及搭建，组件学习。每次大的更新都会做相应的记录。
-    [Jerry的个人博客](http://blog.csdn.net/qq_25324335/article/details/78675148)
+这个是我的个人博客，里面有对本项目的详细介绍及搭建，组件学习。每次大的更新都会做相应的记录。
+[Jerry的个人博客](http://blog.csdn.net/qq_25324335/article/details/78675148)
 # 项目演示    
-    [![项目演示图]](https://github.com/JerryYuanJ/a-vue-app-template/blob/master/static/file/display.gif)  
-    [项目演示图]:https://github.com/JerryYuanJ/a-vue-app-template/blob/master/static/file/display.gif 
+![项目演示图](http://img.blog.csdn.net/20180317195826324?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMjUzMjQzMzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)  
