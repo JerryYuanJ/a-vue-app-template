@@ -3,13 +3,14 @@ import Router from 'vue-router'
 import Main from '../pages/main.vue'
 import Tool from '../pages/tool.vue'
 import My from '../pages/my.vue'
-import MemoNew from '../pages/tool/memo/memonew.vue'
-import MemoList from '../pages/tool/memo/memolist.vue'
-import Loadmore from '../pages/tool/Loadmore.vue'
-import MyInfo from '../pages/my/MyInfo.vue'
-import Workflow from '../pages/tool/Workflow.vue'
 
+//指定同一个chunkName打包后会打到同一个js中去
+const MemoNew = ()=>import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memonew.vue');
+const MemoList = ()=>import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memolist.vue');
 
+const Loadmore = ()=>import(/* webpackChunkName: 'Loadmore' */'../pages/tool/Loadmore.vue');
+const MyInfo =() =>import(/* webpackChunkName: 'MyInfo' */'../pages/my/MyInfo.vue');
+const Workflow = () => import(/* webpackChunkName: 'Workflow' */'../pages/tool/Workflow.vue');
 /**
  * 图表
  */
