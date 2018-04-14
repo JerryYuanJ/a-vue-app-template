@@ -4,7 +4,7 @@
     这是一个移动端的app项目示例，可根据此例进行一个H5应用的搭建，利用打包工具（如cordova）可以打包成原生应用。
     项目的默认端口是`8899`，你也可以在webpack的配置中自己更改。
 # 项目演示
-  
+  ![vue-app演示图](https://github.com/JerryYuanJ/a-vue-app-template/blob/master/src/assets/app.gif)
 # 博客
 这个是我的个人博客，里面有对本项目的详细介绍及搭建，组件学习。每次大的更新都会做相应的记录。
 [Jerry的个人博客](http://blog.csdn.net/qq_25324335/article/details/78675148)
