@@ -14,41 +14,53 @@
           <mt-swipe-item><img src="../assets/tool/swipe3.jpg" height="120" width="100%"/></mt-swipe-item>
         </mt-swipe>
       </div>
-      <div class="group-title">| - 常用应用</div>
+      <div class="group-title">常用测试</div>
       <!--一条分割线-->
       <div class="line"></div>
       <!--应用展示-->
       <div class="apps">
-        <div @click="go('chart')">
+        <div @click="go('/chartBox')">
           <img src="../assets/tool/chart.png"/>
-          <span>业务统计</span>
+          <span>统计图表</span>
         </div>
-        <div @click="go('loadmore')">
+        <div @click="go('/tool/loadmore')">
           <img src="../assets/tool/data.png"/>
-          <span>测试数据</span>
+          <span>加载更多</span>
         </div>
-        <div @click="go('memolist')">
+        <div @click="go('/tool/memolist')">
           <img src="../assets/tool/note.png"/>
           <span>我的备忘</span>
         </div>
-        <div @click="go('workflow')">
+        <div @click="go('/tool/otherTest')">
           <img src="../assets/tool/workflow.png"/>
           <span>其它测试</span>
         </div>
       </div>
 
       <div class="apps">
-        <div @click="go('sassTest')">
+        <div @click="go('/tool/sassTest')">
           <img src="../assets/tool/css3.png"/>
           <span>Sass测试</span>
         </div>
-        <div @click="go('refresh')">
-          <img src="../assets/tool/refresh.png"/>
-          <span>下拉刷新</span>
-        </div>
+        <div></div>
         <div></div>
         <div></div>
       </div>
+    </div>
+
+    <div class="group-title">自定义组件</div>
+    <div class="line"></div>
+    <div class="apps">
+      <div @click="go('/test/refresh')">
+        <img src="../assets/tool/refresh.png"/>
+        <span>下拉刷新</span>
+      </div>
+      <div @click="go('/test/selectHeader')">
+        <img src="../assets/components/select.png"/>
+        <span>SelectHeader</span>
+      </div>
+      <div></div>
+      <div></div>
     </div>
   </div>
 </template>
@@ -66,12 +78,16 @@
 
   .group-title {
     margin-top: 10px;
-    font-size: 11px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
     color: #0c60ee;
+    padding-left: 5px;
+    border-left: 5px solid #0c60ee;
   }
 
   .line {
-    margin-top: 10px;
+    margin-top: 5px;
     height: 1px;
     background-color: #c4e3f3;
   }
@@ -115,8 +131,7 @@
   export default {
     methods: {
       go(index){
-        index === 'chart' ? this.$router.push('/chartBox') :
-          this.$router.push('/tool/' + index);
+        this.$router.push(index);
       }
     },
     created(){

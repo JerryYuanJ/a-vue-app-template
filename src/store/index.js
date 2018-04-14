@@ -12,7 +12,7 @@ const store = new Vuex.Store({
   state: {
     footerVisible: true,
     selectedTab: 'main',
-    chartType:''
+    chartType:'客户分类结构'
   },
   mutations: {
     setChartType(state, param){

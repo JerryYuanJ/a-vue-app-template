@@ -1,6 +1,6 @@
 <template>
   <div id="loadmore">
-    <mt-header fixed title="load more">
+    <mt-header fixed title="Loadmore使用案例">
       <router-link to="/tool" slot="left">
         <mt-button icon="back">返回</mt-button>
       </router-link>
@@ -15,14 +15,18 @@
                    :bottom-method="loadBottom" ref="loadmore">
 
         <div slot="top" class="mint-loadmore-top">
-          <span v-show="topStatus === 'loading'" :class="{ 'rotate': topStatus === 'drop' }">↓</span>
+          <span v-show="topStatus === 'loading'">
+            数据加载中<i class="fa fa-spinner fa-pulse"></i>
+          </span>
           <span v-show="topStatus === 'drop'">我在加载数据</span>
           <span v-show="topStatus === 'pull'">下拉我就更新给你看</span>
         </div>
         <div slot="bottom" class="mint-loadmore-bottom" v-show="!bottomAllLoaded">
           <span v-show="bottomStatus === 'drop'">释放更新</span>
           <span v-show="bottomStatus === 'pull'">上拉加载更多</span>
-          <span v-show="bottomStatus === 'loading'">Loading...</span>
+          <span v-show="bottomStatus === 'loading'">
+            数据加载中<i class="fa fa-spinner fa-pulse"></i>
+          </span>
         </div>
         <mt-cell-swipe
           @click.native="clickMe"
@@ -34,17 +38,19 @@
           :title="item+'s'"
           :key="index">
         </mt-cell-swipe>
-
         <!--<mt-cell v-for="(item,index) in list" :title="item+'s'" :key="index"></mt-cell>-->
       </mt-loadmore>
 
     </div>
   </div>
 </template>
-<style scoped>
+<style lang="scss">
   .content {
     margin-top: 40px;
     height: auto;
+    .mint-cell-wrapper{
+      border-bottom: 1px solid #eaeaea;
+    }
   }
 </style>
 <script>
@@ -98,6 +104,12 @@
     mounted(){
       for (let i = 0; i < 10; i++) {
         this.list.push(i)
+      }
+    },
+    created(){
+      let _footer = this.$store.state.footerVisible;
+      if (_footer) {
+        this.$store.commit('TOGGLE_FOOTER');
       }
     }
   }

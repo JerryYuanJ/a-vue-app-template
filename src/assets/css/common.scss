@@ -1,3 +1,4 @@
+/***************测试******************/
 $fontSize: 15px;
 $fontColor: #000000;
 $lineColor: #eaeaea;
@@ -10,4 +11,56 @@ $cellBgColor: #eaeaea55;
   line-height: 40px;
   background-color: $bgc;
 }
+/*********==组件使用共有样式==********/
+/**通用样式**/
+$success-color: #4caf50;
+$error-color: #f44336;
+$warning-color: #ffc107;
 
+/**header样式**/
+$header-height: 45px;
+$header-bg-color: #3399ff;
+
+/**按钮样式**/
+$btn-normal-height: 40px;
+$btn-normal-color: #3366ff;
+$btn-pressed-color: #3399ff;
+
+/** flex的居中显示*/
+@mixin alignCenter($type:'block') {
+  @if $type=='block' {
+    display: flex;
+  } @else if $type=='inline-block' {
+    display: inline-flex;
+  }
+  align-items: center;
+  justify-content: center;
+}
+
+/**固定的头部和底部**/
+@mixin fixedPosition($position:'top') {
+  position: fixed;
+  left: 0;
+  right: 0;
+  @if $position=='top' {
+    top: 0
+  } @else if $position=='bottom' {
+    bottom: 0;
+  }
+}
+
+/**文字超出后的省略号**/
+@mixin textOverflow($width) {
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/**三角形**/
+@mixin triangle($position,$size,$color) {
+  width: 0;
+  height: 0;
+  border: $size solid transparent;
+  border-#{$position}-color: $color;
+}

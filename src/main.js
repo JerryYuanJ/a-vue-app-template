@@ -5,9 +5,10 @@ import App from './App'
 import router from './router'
 import MintUI from 'mint-ui'
 import store from './store/index.js'
+//引入echarts
 import echarts from 'echarts'
-
-
+//引入font-awesome.css
+import 'font-awesome/css/font-awesome.css'
 
 Vue.prototype.$echarts = echarts;
 

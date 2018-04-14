@@ -36,7 +36,7 @@
 </style>
 <script>
 
-  import PullToRefresh from '../../components/PullToRefresh'
+  import PullToRefresh from '../../components/coms/pull-to-refresh.vue'
 
   export default {
     name: 'PullToRefreshPage',
@@ -57,6 +57,12 @@
           resolve();
         }, 1000)
       }
-    }
+    },
+    created(){
+      let _footer = this.$store.state.footerVisible;
+      if (_footer) {
+        this.$store.commit('TOGGLE_FOOTER');
+      }
+    },
   }
 </script>

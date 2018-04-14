@@ -20,7 +20,7 @@
   }
 </script>
 
-<style scoped="">
+<style scoped>
   .content-div {
     margin-bottom: 55px;
   }

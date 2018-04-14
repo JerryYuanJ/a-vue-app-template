@@ -43,6 +43,12 @@
 </style>
 <script>
   export default {
-    name: 'sassTest'
+    name: 'sassTest',
+    created(){
+      let _footer = this.$store.state.footerVisible;
+      if (_footer) {
+        this.$store.commit('TOGGLE_FOOTER');
+      }
+    }
   }
 </script>

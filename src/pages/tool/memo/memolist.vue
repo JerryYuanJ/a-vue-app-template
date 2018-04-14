@@ -4,7 +4,7 @@
       <router-link to="/tool" slot="left">
         <mt-button icon="back">返回</mt-button>
       </router-link>
-      <mt-button slot="right" @click="newMemo">-|-</mt-button>
+      <mt-button slot="right" @click="newMemo"><i class="fa fa-plus"></i></mt-button>
     </mt-header>
     <div class="content">
       <template v-for="(item,index) in memoList">

@@ -4,13 +4,16 @@ import Main from '../pages/main.vue'
 import Tool from '../pages/tool.vue'
 import My from '../pages/my.vue'
 
+
+import ComponentsRouter from './modules/components'
+
 //指定同一个chunkName打包后会打到同一个js中去
 const MemoNew = ()=>import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memonew.vue');
 const MemoList = ()=>import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memolist.vue');
 
 const Loadmore = ()=>import(/* webpackChunkName: 'Loadmore' */'../pages/tool/Loadmore.vue');
 const MyInfo =() =>import(/* webpackChunkName: 'MyInfo' */'../pages/my/MyInfo.vue');
-const Workflow = () => import(/* webpackChunkName: 'Workflow' */'../pages/tool/Workflow.vue');
+const OtherTest = () => import(/* webpackChunkName: 'Other' */'../pages/tool/OtherTest.vue');
 /**
  * 图表
  */
@@ -22,7 +25,6 @@ const OppFunnel = r => require.ensure([], () => r(require('../pages/tool/chart/O
 const SaleRank = r => require.ensure([], () => r(require('../pages/tool/chart/SaleRank')), 'SaleRank')
 /*sassTest*/
 const SassTest = r => require.ensure([], () => r(require('../pages/tool/SassTest')), 'SassTest')
-const PullToRefreshPage = r => require.ensure([], () => r(require('../pages/tool/PullToRefreshPage')), 'PullToRefreshPage')
 
 
 Vue.use(Router);
@@ -50,18 +52,21 @@ export default new Router({
       path: '/my/myinfo', component: MyInfo
     },
     {
-      path: '/tool/workflow', component: Workflow
+      path: '/tool/otherTest', component: OtherTest
     },
     {
       path: '/tool/sassTest', component: SassTest
-    }, {
-      path: '/tool/refresh', component: PullToRefreshPage
     },
     {
       path: '/chartBox',
       name: 'chartBox',
       component: chartBox,
       children: [
+        {
+          name:'',
+          path:'',
+          component: CustomerCategory
+        },
         {
           name: 'CustomerCategory',
           path: 'CustomerCategory',
@@ -89,5 +94,6 @@ export default new Router({
         }
       ]
     },
+    ...ComponentsRouter
   ]
 })
