@@ -16,7 +16,8 @@
     (运行）npm run dev 
     (打包）npm run build
 # 功能介绍
-    * mint-ui中较为复杂组件的使用，比如loadmore和swipe组件的结合使用，完成主流app列表页的上拉加载更多、下拉刷新、左滑切出编辑选项等常见需求。
+    * mint-ui中较为复杂组件的使用，比如loadmore和swipe组件的结合使用，完成主流app列表页的上拉加载更多、下拉刷新、
+      左滑切出编辑选项等常见需求。
     * mint-ui中MessageBox的校验问题解决
     * 子路由的使用
     * echarts图的使用
