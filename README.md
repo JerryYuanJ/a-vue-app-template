@@ -35,5 +35,5 @@
       * 项目结构调整,主要是将自定义的组件抽取到单独的文件夹中components/comswen目录中存放所有的自定义组件,pages/test目录中
         存放对应的测试组件使用界面
       * 模块化路由配置（之前的没有动，新建的组件测试页面的路由都抽取到router/modules/components.js中）
-      * 新建一个select-header组件，用于可选择的头部组件的封装，demo页面(src/) 
+      * 新建一个select-header组件，用于可选择的头部组件的封装 
       * 添加font-awesome依赖
