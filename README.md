@@ -7,7 +7,7 @@
   ![vue-app演示图](https://github.com/JerryYuanJ/a-vue-app-template/blob/master/src/assets/app.gif)
 # 博客
 这个是我的个人博客，里面有对本项目的详细介绍及搭建，组件学习。每次大的更新都会做相应的记录。
-[Jerry的个人博客](http://blog.csdn.net/qq_25324335/article/details/78675148)
+[## Jerry的个人博客](http://blog.csdn.net/qq_25324335/article/details/78675148)
 
 # 项目运行
     git clone https://github.com/JerryYuanJ/a-vue-app-template.git
