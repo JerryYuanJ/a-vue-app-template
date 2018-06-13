@@ -9,7 +9,7 @@ import store from './store/index.js'
 import echarts from 'echarts'
 //引入font-awesome.css
 // import 'font-awesome/css/font-awesome.css'
-import 'font-awesome/css/font-awesome.min.css'
+// 暂时从cdn上获取,此issue以后有时间再研究
 Vue.prototype.$echarts = echarts;
 
 Vue.use(MintUI);
