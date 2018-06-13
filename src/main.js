@@ -8,8 +8,8 @@ import store from './store/index.js'
 //引入echarts
 import echarts from 'echarts'
 //引入font-awesome.css
-import 'font-awesome/css/font-awesome.css'
-
+// import 'font-awesome/css/font-awesome.css'
+import 'font-awesome/css/font-awesome.min.css'
 Vue.prototype.$echarts = echarts;
 
 Vue.use(MintUI);
