@@ -20,8 +20,8 @@
     <transition enterActiveClass="animated zoomIn" leaveActiveClass="animated zoomOut">
       <div v-if="showOptions" class="option-box">
         <span class="option-arrow" :style="{borderBottomColor:bgColor}"></span>
-        <template v-for="item in options">
-          <div class="option-item" @click="clickOption(item)"
+        <template v-for="(item,index) in options">
+          <div  :key="index" class="option-item" @click="clickOption(item)"
                :style="{backgroundColor:bgColor,color:textColor}">
             {{item.text}}
           </div>
@@ -49,6 +49,8 @@
     color: white;
 
     .center {
+      display: flex;
+      align-items: center; 
       .center-text {
         float: left;
         margin-right: 3px;
@@ -65,6 +67,7 @@
       flex-direction: column;
       .option-arrow {
         margin-top: -20px;
+        z-index: 99999;
         @include triangle('bottom', 10px, rgba(#EAEAEA, 0.5));
       }
       .option-item {

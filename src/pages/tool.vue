@@ -42,7 +42,10 @@
           <img src="../assets/tool/css3.png"/>
           <span>Sass测试</span>
         </div>
-        <div></div>
+        <div @click="go('/tool/calendarTest')">
+          <img src="../assets/tool/calendar.png"/>
+          <span>日历测试</span>
+        </div>
         <div></div>
         <div></div>
       </div>

@@ -25,6 +25,7 @@ const OppFunnel = r => require.ensure([], () => r(require('../pages/tool/chart/O
 const SaleRank = r => require.ensure([], () => r(require('../pages/tool/chart/SaleRank')), 'SaleRank')
 /*sassTest*/
 const SassTest = r => require.ensure([], () => r(require('../pages/tool/SassTest')), 'SassTest')
+const CalendarTest = r => require.ensure([], () => r(require('../pages/tool/CalendarTest')), 'CalendarTest')
 
 
 Vue.use(Router);
@@ -56,6 +57,9 @@ export default new Router({
     },
     {
       path: '/tool/sassTest', component: SassTest
+    },
+    {
+      path: '/tool/calendarTest', component: CalendarTest
     },
     {
       path: '/chartBox',
