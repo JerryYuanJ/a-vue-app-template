@@ -23,10 +23,12 @@
     "vue": "^2.5.2",
     "vue-calendar-component": "^2.6.0",
     "vue-event-calendar": "^1.5.2",
+    "vue-i18n": "^7.8.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.3.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",

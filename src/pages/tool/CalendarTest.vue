@@ -178,13 +178,13 @@ export default {
     }
   },
   watch: {},
-  computed: {},
   created() {
     let _footer = this.$store.state.footerVisible;
     if (_footer) {
       this.$store.commit("TOGGLE_FOOTER");
     }
   },
+  computed: {},
   mounted() {}
 };
 </script>

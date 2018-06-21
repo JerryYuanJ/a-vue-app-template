@@ -46,7 +46,10 @@
           <img src="../assets/tool/calendar.png"/>
           <span>日历测试</span>
         </div>
-        <div></div>
+        <div @click="go('/tool/I18NTest')">
+          <img src="../assets/tool/i18n.png"/>
+          <span>国际化测试</span>
+        </div>
         <div></div>
       </div>
     </div>

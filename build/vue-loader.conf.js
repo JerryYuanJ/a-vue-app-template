@@ -8,9 +8,11 @@ const sourceMapEnabled = isProduction
 
 
 module.exports = {
-  loaders: utils.cssLoaders({
+  loaders: Object.assign(utils.cssLoaders({
     sourceMap: sourceMapEnabled,
     extract: isProduction
+  }),{
+    i18n: '@kazupon/vue-i18n-loader'
   }),
   cssSourceMap: sourceMapEnabled,
   transformToRequire: {

@@ -8,11 +8,11 @@ import My from '../pages/my.vue'
 import ComponentsRouter from './modules/components'
 
 //指定同一个chunkName打包后会打到同一个js中去
-const MemoNew = ()=>import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memonew.vue');
-const MemoList = ()=>import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memolist.vue');
+const MemoNew = () => import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memonew.vue');
+const MemoList = () => import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memolist.vue');
 
-const Loadmore = ()=>import(/* webpackChunkName: 'Loadmore' */'../pages/tool/Loadmore.vue');
-const MyInfo =() =>import(/* webpackChunkName: 'MyInfo' */'../pages/my/MyInfo.vue');
+const Loadmore = () => import(/* webpackChunkName: 'Loadmore' */'../pages/tool/Loadmore.vue');
+const MyInfo = () => import(/* webpackChunkName: 'MyInfo' */'../pages/my/MyInfo.vue');
 const OtherTest = () => import(/* webpackChunkName: 'Other' */'../pages/tool/OtherTest.vue');
 /**
  * 图表
@@ -26,6 +26,7 @@ const SaleRank = r => require.ensure([], () => r(require('../pages/tool/chart/Sa
 /*sassTest*/
 const SassTest = r => require.ensure([], () => r(require('../pages/tool/SassTest')), 'SassTest')
 const CalendarTest = r => require.ensure([], () => r(require('../pages/tool/CalendarTest')), 'CalendarTest')
+const I18NTest = r => require.ensure([], () => r(require('../pages/tool/I18NTest')), 'I18NTest')
 
 
 Vue.use(Router);
@@ -60,6 +61,9 @@ export default new Router({
     },
     {
       path: '/tool/calendarTest', component: CalendarTest
+    },
+    {
+      path: '/tool/I18NTest', component: I18NTest
     },
     {
       path: '/chartBox',
