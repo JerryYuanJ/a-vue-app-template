@@ -20,9 +20,9 @@
     data(){
       return {
         selected: this.$store.state.selectedTab,
-        img1: "/src/assets/tool/home_selected.png",
-        img3: "/src/assets/tool/tool.png",
-        img5: "/src/assets/tool/user.png"
+        img1: require("../assets/tool/home_selected.png"),
+        img3: require("../assets/tool/tool.png"),
+        img5: require("../assets/tool/user.png")
       }
     },
     computed: {
@@ -35,21 +35,21 @@
         handler(){
           if (this.selected === "main") {
             this.$router.push('/main');
-            this.img1 = "/src/assets/tool/home_selected.png"
+            this.img1 = require("../assets/tool/home_selected.png")
           } else {
-            this.img1 = "/src/assets/tool/home.png"
+            this.img1 = require("../assets/tool/home.png")
           }
           if (this.selected === "tool") {
             this.$router.push('/tool');
-            this.img3 = '/src/assets/tool/tool_selected.png'
+            this.img3 = require('../assets/tool/tool_selected.png')
           } else {
-            this.img3 = '/src/assets/tool/tool.png'
+            this.img3 = require('../assets/tool/tool.png')
           }
           if (this.selected === "my") {
             this.$router.push('/my');
-            this.img5 = "/src/assets/tool/user_selected.png";
+            this.img5 = require("../assets/tool/user_selected.png")
           } else {
-            this.img5 = "/src/assets/tool/user.png";
+            this.img5 = require("../assets/tool/user.png")
           }
         }
       }
