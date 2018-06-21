@@ -19,6 +19,7 @@
     "echarts": "^3.8.5",
     "font-awesome": "^4.7.0",
     "mint-ui": "^2.2.10",
+    "v-calendar": "^0.9.7",
     "vue": "^2.5.2",
     "vue-calendar-component": "^2.6.0",
     "vue-event-calendar": "^1.5.2",

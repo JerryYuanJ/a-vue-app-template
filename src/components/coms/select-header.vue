@@ -58,6 +58,7 @@
       }
     }
     .option-box {
+      z-index: 9999999;
       @include alignCenter('block');
       position: absolute;
       top: 45px;
