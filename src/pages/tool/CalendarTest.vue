@@ -27,7 +27,17 @@
             </div>
         </div>
         <div class="c-3" v-show="show3">
-            <v-calendar is-expanded :attributes='attrs' @dayclick='dayClicked' @update:frompage="changeMonth"></v-calendar>
+            <v-calendar is-expanded :attributes='attrs' @dayclick='dayClicked' @update:frompage="changeMonth">
+              <span slot='header-title' slot-scope='{ shortMonthLabel, yearLabel }'>
+                {{ shortMonthLabel }} {{ yearLabel }}
+              </span>
+               <span slot="day-content" slot-scope="{ day }">
+                {{ day.day }}
+               <template v-if="day.day===7||day.day===14">
+                 <span style="color:red;height:2px;width:2px">*</span>
+               </template>
+              </span> <!---->
+            </v-calendar>
         </div>
       </div>
   </div>
@@ -127,7 +137,7 @@ export default {
         {
           key: "bar",
           bar: {
-            height: "5px",
+            height: "5px"
           },
           dates: [new Date(2018, 5, 19)]
         }
@@ -155,8 +165,8 @@ export default {
       console.info(day);
       this.attrs[1].dates.push(day.date);
     },
-    changeMonth(date){
-      console.info(date)
+    changeMonth(date) {
+      console.info(date);
     },
     clickOp1(item) {
       if (item.value === 1) {

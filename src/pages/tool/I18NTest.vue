@@ -79,10 +79,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .i18n{
+  *{
+    margin: 0;
+  }
   .content{
     margin-top: 40px;
     div{
-      padding: 0 0 0 20px;
+      padding: 10px;
       border-bottom: 1px solid lightgray;
       h4{
         display: inline-block

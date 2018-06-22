@@ -71,6 +71,7 @@ export const initI18N = function(lang) {
         locale:lang,
         fallbackLocale: 'en',
         dateTimeFormats,
+        silentTranslationWarn:true, // seems it doesn't work well...
         messages:{
             zh: require('./common/i18n/app-zh.json'),
             en: require('./common/i18n/app-en.json'),
