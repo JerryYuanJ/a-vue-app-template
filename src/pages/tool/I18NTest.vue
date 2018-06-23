@@ -14,12 +14,19 @@
          <div>
            命名格式化:<h4>{{ $t('named-formatting',{ name: '朱辰迪'}) }}</h4>
          </div>
+          <div>
+           列表格式化1:<h4>{{ $t('list-formatting',['朱','辰','迪']) }}</h4>
+         </div>
+         <div>
+           列表格式化2:<h4>{{ $t('list-formatting',{ 0:'朱',1:'辰',2:'迪'}) }}</h4>
+         </div>
          <div>
            复数形式:
            <h4>{{ $tc('apple',11, { count:11 } ) }}</h4>/
            <h4>{{ $tc('apple',1) }}</h4>/
            <h4>{{ $tc('apple',0 ) }}</h4>
          </div>
+         <div>fallback :<h4>{{ $t("fromEn") }}</h4></div>
          <div>
            日期国际化:
            <h4>{{ $d(new Date(), 'short','en-US') }}</h4>
@@ -40,7 +47,8 @@
   "en": {
     "hello": "hello world!",
     "title": "For i18n use",
-    "apple": "no apples | one apple | {count} apples"
+    "apple": "no apples | one apple | {count} apples",
+    "fromEn": "this is from English"
   },
   "ja": {
     "hello": "こんにちは、世界！"
@@ -50,7 +58,8 @@
     "title": "国际化使用",
     "html": "换 <span style='color:blue'>行</span>",
     "named-formatting": "{name} 很好",
-    "directive": "来自指令 参数:{param}"
+    "directive": "来自指令 参数:{param}",
+    "list-formatting": "{0} {1} {2} 很好呀～"
   }
 }
 </i18n>
