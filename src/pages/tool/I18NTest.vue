@@ -33,11 +33,23 @@
            <h4>{{ $d(new Date(), 'long', 'zh-CN') }}</h4>
          </div>
          <div>
-           v-t指令国际化:
+           v-t指令国际化-1:
+           <h4>
+             <p v-t="'hello'"></p>
+           </h4>
+         </div>
+         <div>
+           v-t指令国际化-2:
            <h4>
              <p v-t="{path,args:{param:'KOBE'}}"></p>
            </h4>
          </div>
+         <div>
+           组件插值：
+          <i18n path="term" tag="label" for="tos">
+            <a href="#" target="_blank">{{ $t('tos') }}</a>
+          </i18n>
+          </div>
       </div>
   </div>
 </template>
@@ -59,7 +71,9 @@
     "html": "换 <span style='color:blue'>行</span>",
     "named-formatting": "{name} 很好",
     "directive": "来自指令 参数:{param}",
-    "list-formatting": "{0} {1} {2} 很好呀～"
+    "list-formatting": "{0} {1} {2} 很好呀～",
+    "tos": "服务条款",
+    "term": "我接受 xxx {0}."
   }
 }
 </i18n>
