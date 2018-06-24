@@ -4,7 +4,8 @@
     这是一个移动端的app项目示例，可根据此例进行一个H5应用的搭建，利用打包工具（如cordova）可以打包成原生应用。
     项目的默认端口是`8899`，你也可以在webpack的配置中自己更改。
 # 项目演示
-  ![vue-app演示图](https://github.com/JerryYuanJ/a-vue-app-template/blob/master/src/assets/app.gif)
+  由于录屏软件的问题，该演示图可能又有些卡顿情况，与项目运行无关。有空会重新录一版。
+  ![vue-app演示图](https://github.com/JerryYuanJ/a-vue-app-template/blob/master/static/app.gif)
 # 博客
 这个是我的个人博客，里面有对本项目的详细介绍及搭建，组件学习。每次大的更新都会做相应的记录。
 ## [Jerry的个人博客](http://blog.csdn.net/qq_25324335/article/details/78675148)
@@ -23,6 +24,8 @@
     * echarts图的使用
     * 组件化开发，包括组件开发的常见问题的解决
     * 子路由的应用，以及刷新当前子路由页面的问题解决
+    * 国际化插件的使用详解
+    * 移动端日历组件的展示运用
 # 更新日志
     * ~2018-03-13
       项目搭建及部分代码调整，组件学习、测试等。
@@ -38,3 +41,6 @@
       * 模块化路由配置（之前的没有动，新建的组件测试页面的路由都抽取到router/modules/components.js中）
       * 新建一个select-header组件，用于可选择的头部组件的封装 
       * 添加font-awesome依赖
+    * 2018-06-20
+      * 添加了国际化插件及测试demo
+      * 添加了三种日历插件及测试demo
