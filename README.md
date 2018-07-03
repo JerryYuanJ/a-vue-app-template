@@ -3,6 +3,7 @@
     路由管理:vue-router，状态管理:vuex，网络请求:axios。
     这是一个移动端的app项目示例，可根据此例进行一个H5应用的搭建，利用打包工具（如cordova）可以打包成原生应用。
     项目的默认端口是`8899`，你也可以在webpack的配置中自己更改。
+    本项目没有使用eslint代码检查，所以有一些代码风格不是很规范
 # 项目演示
   由于录屏软件的问题，该演示图可能又有些卡顿情况，与项目运行无关。有空会重新录一版。
   ![vue-app演示图](https://github.com/JerryYuanJ/a-vue-app-template/blob/master/static/app.gif)
