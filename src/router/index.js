@@ -25,8 +25,12 @@ const OppFunnel = r => require.ensure([], () => r(require('../pages/tool/chart/O
 const SaleRank = r => require.ensure([], () => r(require('../pages/tool/chart/SaleRank')), 'SaleRank')
 /*sassTest*/
 const SassTest = r => require.ensure([], () => r(require('../pages/tool/SassTest')), 'SassTest')
+/*日历组件测试 */
 const CalendarTest = r => require.ensure([], () => r(require('../pages/tool/CalendarTest')), 'CalendarTest')
+/*国际化测试 */
 const I18NTest = r => require.ensure([], () => r(require('../pages/tool/I18NTest')), 'I18NTest')
+/*富文本测试 */
+const RichTextTest = r => require.ensure([], () => r(require('../pages/tool/RichTextTest')), 'RichTextTest')
 
 
 Vue.use(Router);
@@ -64,6 +68,9 @@ export default new Router({
     },
     {
       path: '/tool/I18NTest', component: I18NTest
+    },
+    {
+      path: '/tool/richText', component: RichTextTest
     },
     {
       path: '/chartBox',

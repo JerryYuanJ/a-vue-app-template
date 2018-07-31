@@ -50,7 +50,10 @@
           <img src="../assets/tool/calendar.png"/>
           <span>日历测试</span>
         </div>
-        <div></div>
+        <div @click="go('/tool/richText')">
+          <img src="../assets/tool/editor.png"/>
+          <span>富文本测试</span>
+        </div>
       </div>
     </div>
 
