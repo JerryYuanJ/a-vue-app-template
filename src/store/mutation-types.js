@@ -1,5 +1,5 @@
 /**
  * Created by Jerry on 2017/11/15.
  */
-export const TOGGLE_FOOTER = 'TOGGLE_FOOTER';
-export const SELECT_TAB = 'SELECT_TAB';
+export const SELECT_FOOTER_TAB = 'SELECT_FOOTER_TAB';
+export const SET_CHART_TYPE = 'SET_CHART_TYPE';

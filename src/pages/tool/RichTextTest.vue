@@ -22,12 +22,6 @@ export default {
             let c2 = c1.replace(/<img/g, '<img width="100%"');
             this.content = c2;
         }
-    },
-    created() {
-        let _footer = this.$store.state.footerVisible;
-        if (_footer) {
-            this.$store.commit("TOGGLE_FOOTER");
-        }
     }
 };
 </script>

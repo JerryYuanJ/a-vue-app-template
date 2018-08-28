@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+// 直接加载
 import Main from '../pages/main.vue'
 import Tool from '../pages/tool.vue'
 import My from '../pages/my.vue'
 
-
 import ComponentsRouter from './modules/components'
 
+// 按需加载 ： 使用import() 实现
 //指定同一个chunkName打包后会打到同一个js中去
 const MemoNew = () => import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memonew.vue');
 const MemoList = () => import(/* webpackChunkName: 'memo' */'../pages/tool/memo/memolist.vue');
@@ -14,6 +16,8 @@ const MemoList = () => import(/* webpackChunkName: 'memo' */'../pages/tool/memo/
 const Loadmore = () => import(/* webpackChunkName: 'Loadmore' */'../pages/tool/Loadmore.vue');
 const MyInfo = () => import(/* webpackChunkName: 'MyInfo' */'../pages/my/MyInfo.vue');
 const OtherTest = () => import(/* webpackChunkName: 'Other' */'../pages/tool/OtherTest.vue');
+
+// 按需加载：使用require()实现
 /**
  * 图表
  */
@@ -38,39 +42,43 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: '/', component: Main
+      path: '/', name: 'home', component: Main
     },
     {
-      path: '/main', component: Main
-    }, {
-      path: '/tool', component: Tool
-    }, {
-      path: '/my', component: My
-    }, {
-      path: '/tool/memonew', component: MemoNew
-    }, {
-      path: '/tool/memolist', component: MemoList
+      path: '/main', name: 'main', component: Main
+    }, 
+    {
+      path: '/tool', name: 'tool', component: Tool
     },
     {
-      path: '/tool/loadmore', component: Loadmore
+      path: '/my', name: 'my', component: My
     },
     {
-      path: '/my/myinfo', component: MyInfo
+      path: '/tool/memonew', name: 'memo-new', component: MemoNew
     },
     {
-      path: '/tool/otherTest', component: OtherTest
+      path: '/tool/memolist', name: 'memo-list', component: MemoList
     },
     {
-      path: '/tool/sassTest', component: SassTest
+      path: '/tool/loadmore', name: 'loadmore', component: Loadmore
     },
     {
-      path: '/tool/calendarTest', component: CalendarTest
+      path: '/my/myinfo', name: 'my-info', component: MyInfo
     },
     {
-      path: '/tool/I18NTest', component: I18NTest
+      path: '/tool/otherTest', name: 'other-test', component: OtherTest
     },
     {
-      path: '/tool/richText', component: RichTextTest
+      path: '/tool/sassTest', name: 'sass-test', component: SassTest
+    },
+    {
+      path: '/tool/calendarTest', name: 'calendar-test', component: CalendarTest
+    },
+    {
+      path: '/tool/I18NTest', name: 'i18n-test' ,component: I18NTest
+    },
+    {
+      path: '/tool/richText', name: 'rich-text', component: RichTextTest
     },
     {
       path: '/chartBox',
@@ -78,8 +86,8 @@ export default new Router({
       component: chartBox,
       children: [
         {
-          name:'',
-          path:'',
+          name: '',
+          path: '',
           component: CustomerCategory
         },
         {

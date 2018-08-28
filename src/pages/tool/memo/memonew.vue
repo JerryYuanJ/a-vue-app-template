@@ -50,12 +50,6 @@
         isRemind: false
       }
     },
-    created(){
-      let _footer = this.$store.state.footerVisible;
-      if (_footer) {
-        this.$store.commit('TOGGLE_FOOTER');
-      }
-    },
     methods: {
       chooseDatetime(){
         this.$refs.picker.open();

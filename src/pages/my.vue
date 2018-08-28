@@ -85,13 +85,6 @@
       goMyInfo(){
         this.$router.push('/my/myinfo');
       }
-    },
-    created(){
-      let _footer = this.$store.state.footerVisible;
-      if (!_footer) {
-        this.$store.commit('TOGGLE_FOOTER');
-      }
-      this.$store.commit('SELECT_TAB', 'my')
     }
   }
 </script>

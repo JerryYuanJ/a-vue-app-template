@@ -142,13 +142,6 @@
       go(index){
         this.$router.push(index);
       }
-    },
-    created(){
-      let _footer = this.$store.state.footerVisible;
-      if (!_footer) {
-        this.$store.commit('TOGGLE_FOOTER');
-      }
-      this.$store.commit('SELECT_TAB', 'tool')
     }
   }
 </script>

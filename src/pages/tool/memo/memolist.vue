@@ -34,12 +34,6 @@
   import {MessageBox} from 'mint-ui';
 
   export default {
-    created(){
-      let _footer = this.$store.state.footerVisible;
-      if (_footer) {
-        this.$store.commit('TOGGLE_FOOTER');
-      }
-    },
     methods: {
       newMemo(){
         this.$router.push('/tool/memonew');

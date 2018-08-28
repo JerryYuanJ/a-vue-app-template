@@ -71,12 +71,6 @@
     data(){
       return {}
     },
-    created(){
-      let _footer = this.$store.state.footerVisible;
-      if (_footer) {
-        this.$store.commit('TOGGLE_FOOTER');
-      }
-    },
     methods: {
       showDialog(){
         DialogUtil.showPrompt('请输入密码', function (v1, v2) {

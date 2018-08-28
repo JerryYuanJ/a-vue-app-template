@@ -1,6 +1,6 @@
 <template>
   <div id="tab-bar">
-    <mt-tabbar v-model="selected" v-show="isShow" fixed class="border-1px-top">
+    <mt-tabbar v-model="selected" v-show="isShow" fixed>
       <mt-tab-item id="main">
         <img :src="img1" slot="icon">首页
       </mt-tab-item>

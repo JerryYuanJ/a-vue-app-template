@@ -121,12 +121,6 @@
 
   export default {
     name: 'chartBox',
-    created(){
-      let _footer = this.$store.state.footerVisible;
-      if (_footer) {
-        this.$store.commit('TOGGLE_FOOTER');
-      }
-    },
     data(){
       return {
         popupDateVisible: false,

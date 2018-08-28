@@ -105,12 +105,6 @@
       for (let i = 0; i < 10; i++) {
         this.list.push(i)
       }
-    },
-    created(){
-      let _footer = this.$store.state.footerVisible;
-      if (_footer) {
-        this.$store.commit('TOGGLE_FOOTER');
-      }
     }
   }
 </script>

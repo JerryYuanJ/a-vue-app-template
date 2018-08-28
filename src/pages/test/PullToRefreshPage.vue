@@ -12,7 +12,7 @@
     </mt-header>
     <div class="pull-content">
       <pull-to-refresh @load="load">
-        <div v-for="i in players" class="list-item">
+        <div v-for="i in players" class="list-item" :key="i">
           {{ i }}
         </div>
       </pull-to-refresh>

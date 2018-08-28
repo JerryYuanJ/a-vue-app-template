@@ -15,14 +15,16 @@ const store = new Vuex.Store({
     chartType:'客户分类结构'
   },
   mutations: {
-    setChartType(state, param){
+    [types.SET_CHART_TYPE](state, param){
       state.chartType = param
     },
-    [types.TOGGLE_FOOTER] (state) {
-      state.footerVisible = !state.footerVisible
-    },
-    [types.SELECT_TAB](state, val){
-      state.selectedTab = val
+    [types.SELECT_FOOTER_TAB] (state, tabName) {
+      if (tabName) {
+        state.selectedTab = tabName
+        state.footerVisible = true
+      } else {
+        state.footerVisible = false        
+      }
     }
   }
 });
