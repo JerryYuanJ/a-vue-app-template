@@ -1,6 +1,6 @@
 <!--
     @CreationDate:2018/3/14
-    @Author:Joker
+    @Author:Jerry
     @Usage:图表展示主界面,根据picker切换展示不同的子路由界面
 -->
 <template>

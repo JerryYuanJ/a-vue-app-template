@@ -1,6 +1,6 @@
 <!--
     @CreationDate:2018/3/14
-    @Author:Joker
+    @Author:Jerry
     @Usage:商机漏斗图
 -->
 <template>

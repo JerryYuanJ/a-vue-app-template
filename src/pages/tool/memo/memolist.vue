@@ -8,7 +8,7 @@
     </mt-header>
     <div class="content">
       <template v-for="(item,index) in memoList">
-        <mt-cell isLink @click.native="showDetail(item)">
+        <mt-cell isLink @click.native="showDetail(item)" :key="index">
           <span slot="title">{{item.title}}</span>
           <span>{{item.content}}</span>
         </mt-cell>
