@@ -11,7 +11,12 @@ function resolve(dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    // vendor: [
+    //   'echarts',
+    //   'vue',
+    //   'vue-html5-editor'
+    // ]
   },
   output: {
     path: config.build.assetsRoot,

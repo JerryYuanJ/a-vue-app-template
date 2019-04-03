@@ -82,6 +82,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
+      // minChunks: Infinity,
+      // filename: 'vendor.[chunkhash].js',
       minChunks: function (module) {
         // any required modules inside node_modules are extracted to vendor
         return (
@@ -124,6 +126,9 @@ if (config.build.productionGzip) {
   const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
   webpackConfig.plugins.push(
+    // be caseful with the version
+    // must be downgraded to 1.x to macth webpack3.x
+    // otherwise it will cause error and fail to build
     new CompressionWebpackPlugin({
       asset: '[path].gz[query]',
       algorithm: 'gzip',
